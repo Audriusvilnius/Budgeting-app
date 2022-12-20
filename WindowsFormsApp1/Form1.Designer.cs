@@ -649,7 +649,7 @@
             this.numericUpDown8.Size = new System.Drawing.Size(120, 31);
             this.numericUpDown8.TabIndex = 30;
             this.numericUpDown8.Value = new decimal(new int[] {
-            5,
+            9,
             0,
             0,
             0});

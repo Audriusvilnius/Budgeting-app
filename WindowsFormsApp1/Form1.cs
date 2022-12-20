@@ -36,8 +36,9 @@ namespace WindowsFormsApp1
         public static double inflation_Var = 2.9;
         public static double total_old = 0;
         public static double total_new = 0;
-        public static int point_size = 5;
-            static double total_operCost_New;
+        public static int point_size = 9;
+
+        List<Budget> data;
 
         public static List<double> SaleOut_total;
         public static List<double> SaleOut_total_old;
@@ -56,6 +57,7 @@ namespace WindowsFormsApp1
         public static List<double> tem1;
         public static List<double> Total_Old;
         public static List<double> Total_New;
+
 
         private class Budget
         {
@@ -76,6 +78,7 @@ namespace WindowsFormsApp1
             static double total_expend_old;
             static double total_expend_New;
             static double total_operCost_old;
+            public double total_operCost_New;
 
 
             public object numericUpDown1;
@@ -189,7 +192,7 @@ namespace WindowsFormsApp1
                 fee = a_fee;
                 expend = a_expend;
                 operCost = a_operCost;
-                
+
 
             }
             public Budget(Budget a)
@@ -244,7 +247,7 @@ namespace WindowsFormsApp1
             }
             public double Total_saleIn_old()
             {
-                total_saleIn_old +=Get_saleIn;
+                total_saleIn_old += Get_saleIn;
                 return total_saleIn_old;
             }
             public double Total_saleIn_New()
@@ -252,11 +255,15 @@ namespace WindowsFormsApp1
                 total_saleIn_New += Get_total_salein();
                 return total_saleIn_New;
             }
-            public double Total_fee_old()
+            public double Total_fee_old
             {
-                total_fee_old += Get_fee;
-                return total_fee_old;
+                get
+                {
+                    total_fee_old += Get_fee;
+                    return total_fee_old;
+                }
             }
+
             public double Total_fee_New()
             {
                 total_fee_New += Get_total_fee();
@@ -264,7 +271,7 @@ namespace WindowsFormsApp1
             }
             public double Total_expend_old()
             {
-                total_expend_old +=Get_expend;
+                total_expend_old += Get_expend;
                 return total_expend_old;
             }
             public double Total_expend_New()
@@ -281,16 +288,22 @@ namespace WindowsFormsApp1
             {
                 get
                 {
-                return total_operCost_New;
-
-                }
-                set
-                {
-
-                total_operCost_New += Get_total_expend();
+                    total_operCost_New += Get_total_expend();
+                    return total_operCost_New;
                 }
             }
         }
+        //static double Total_operCost_New { get; }
+
+        //total_saleOut_New = 0;
+        //        total_saleIn_old = 0;
+        //        total_saleIn_New = 0;
+        //        total_fee_old = 0;
+        //        total_fee_New = 0;
+        //        total_expend_old = 0;
+        //        total_expend_New = 0;
+        //        total_operCost_old = 0;
+        //       total_operCost_New = 0;
         public Form1()
         {
             InitializeComponent();
@@ -313,42 +326,7 @@ namespace WindowsFormsApp1
         {
             btnLoad.Enabled = true;
 
-            List<Budget> data = new List<Budget>();
-
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "File (*.txt)|*.txt| All file (*.*)|*,*";
-            ofd.FilterIndex = 1;
-            ofd.RestoreDirectory = true;
-            ofd.ShowDialog();
-            if (ofd.FileName != "")
-            {
-                using (var reader = File.OpenText(ofd.FileName))
-                {
-                    if (!reader.EndOfStream) reader.ReadLine();
-
-                    while (!reader.EndOfStream)
-                    {
-                        //string line = reader.ReadLine();
-                        //string[] items = line.Split(',');
-                        //Budget can = new Budget();
-                        //can.SaleOut = Convert.ToDouble(items[0]);        //  Medziagu pardavimo kaina
-                        //can.LabourSaleOut = Convert.ToDouble(items[1]);  //  Paslaugu pardavimo kaina
-                        //can.SaleIn = Convert.ToDouble(items[2]);         //  Prekiu savikaina
-                        //can.Fee = Convert.ToDouble(items[3]);            //  Atliginimai
-                        //can.Expend = Convert.ToDouble(items[4]);         //  Patalpu nuoma, nusidevejimas, paskolos
-                        //can.OperCost = Convert.ToDouble(items[5]);
-                        //data.Add(can);
-                    }
-                }
-            }
-            else MessageBox.Show("File no selected");
-        }
-        private void btnLoad_Click_1(object sender, EventArgs e)
-        {
-            groupBox2.Enabled = true;
-            groupBox1.Enabled = true;
-
-            List<Budget> data = new List<Budget>();
+             data = new List<Budget>();
 
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "File (*.txt)|*.txt| All file (*.*)|*,*";
@@ -368,8 +346,8 @@ namespace WindowsFormsApp1
                         Budget can = new Budget();
                         can.SaleOut = Convert.ToDouble(items[0]);        //  Medziagu pardavimo kaina
                         can.LabourSaleOut = Convert.ToDouble(items[1]);  //  Paslaugu pardavimo kaina
-                        can.SaleIn = Convert.ToDouble(items[2]);        //  Prekiu savikaina
-                        can.Fee = Convert.ToDouble(items[3]);          //  Atliginimai
+                        can.SaleIn = Convert.ToDouble(items[2]);         //  Prekiu savikaina
+                        can.Fee = Convert.ToDouble(items[3]);            //  Atliginimai
                         can.Expend = Convert.ToDouble(items[4]);         //  Patalpu nuoma, nusidevejimas, paskolos
                         can.OperCost = Convert.ToDouble(items[5]);
                         data.Add(can);
@@ -377,6 +355,41 @@ namespace WindowsFormsApp1
                 }
             }
             else MessageBox.Show("File no selected");
+        }
+        private void btnLoad_Click_1(object sender, EventArgs e)
+        {
+            groupBox2.Enabled = true;
+            groupBox1.Enabled = true;
+
+            //List<Budget> data = new List<Budget>();
+
+            //OpenFileDialog ofd = new OpenFileDialog();
+            //ofd.Filter = "File (*.txt)|*.txt| All file (*.*)|*,*";
+            //ofd.FilterIndex = 1;
+            //ofd.RestoreDirectory = true;
+            //ofd.ShowDialog();
+            //if (ofd.FileName != "")
+            //{
+            //    using (var reader = File.OpenText(ofd.FileName))
+            //    {
+            //        if (!reader.EndOfStream) reader.ReadLine();
+
+            //        while (!reader.EndOfStream)
+            //        {
+            //            string line = reader.ReadLine();
+            //            string[] items = line.Split(',');
+            //            Budget can = new Budget();
+            //            can.SaleOut = Convert.ToDouble(items[0]);        //  Medziagu pardavimo kaina
+            //            can.LabourSaleOut = Convert.ToDouble(items[1]);  //  Paslaugu pardavimo kaina
+            //            can.SaleIn = Convert.ToDouble(items[2]);        //  Prekiu savikaina
+            //            can.Fee = Convert.ToDouble(items[3]);          //  Atliginimai
+            //            can.Expend = Convert.ToDouble(items[4]);         //  Patalpu nuoma, nusidevejimas, paskolos
+            //            can.OperCost = Convert.ToDouble(items[5]);
+            //            data.Add(can);
+            //        }
+            //    }
+            //}
+            //else MessageBox.Show("File no selected");
 
             Budget value = new Budget<Budget>(data);
 
@@ -490,13 +503,48 @@ namespace WindowsFormsApp1
                 value = data[i];
                 Total_New.Add(value.Total_New);
             }
+
+
+            double id = value.Total_fee_old;
+
+            label29.Text = Convert.ToString(id);
+
+
             tem1 = new List<double>();
             for (int i = 0; i < data.Count; i++)
             {
                 tem1.Add(0);
             }
 
-            label29.Text = Convert.ToString(total_operCost_New);
+
+            cartesianChart1.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Prognozuojamos vertes",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Circle,
+                    Values = new ChartValues<double>(Total_New),
+                },
+                new LineSeries
+                {
+                    Title = "Nuostolių slenkstis",
+                    PointGeometry = null,
+                    Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0)),
+                    Values = new ChartValues<double>(tem1)
+                },
+                 new LineSeries
+                {
+                    Title = "Pateiktos vertes",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Square,
+                    Values = new ChartValues<double>(Total_Old),
+                },
+            };
+
+
+           
+
 
 
         }
@@ -725,22 +773,22 @@ namespace WindowsFormsApp1
         }
         private void Form1_Closing(object sender, FormClosingEventArgs e)
         {
-            SaleOut_total_old = new List<double>{ 0 };
-            Labor_total = new List<double>{ 0 };
-            SaleOut_total = new List<double>{ 0 };
-            Labor_total_old = new List<double>{ 0 };
-            Sale_In_total = new List<double>{ 0 };
-            Sale_In_total_old = new List<double>{ 0 };
-            Total_fee = new List<double>{ 0 };
-            Total_fee_old = new List<double>{ 0 };
-            Total_expend = new List<double>{ 0 };
-            Total_expend_old = new List<double>{ 0 };
-            Oper_Cost_total = new List<double>{ 0 };
-            Oper_Cost_total_old = new List<double>{ 0 };
-            Total_value = new List<double>{ 0 };
-            Total_value_old = new List<double>{ 0 };
-            tem1 = new List<double>{ 0 };
-            Total_Old = new List<double>{ 0 };
+            SaleOut_total_old = new List<double> { 0 };
+            Labor_total = new List<double> { 0 };
+            SaleOut_total = new List<double> { 0 };
+            Labor_total_old = new List<double> { 0 };
+            Sale_In_total = new List<double> { 0 };
+            Sale_In_total_old = new List<double> { 0 };
+            Total_fee = new List<double> { 0 };
+            Total_fee_old = new List<double> { 0 };
+            Total_expend = new List<double> { 0 };
+            Total_expend_old = new List<double> { 0 };
+            Oper_Cost_total = new List<double> { 0 };
+            Oper_Cost_total_old = new List<double> { 0 };
+            Total_value = new List<double> { 0 };
+            Total_value_old = new List<double> { 0 };
+            tem1 = new List<double> { 0 };
+            Total_Old = new List<double> { 0 };
             Total_New = new List<double> { 0 };
             SaleOut_total_old.Clear();
             Labor_total.Clear();
@@ -762,4 +810,3 @@ namespace WindowsFormsApp1
         }
     }
 }
-           
