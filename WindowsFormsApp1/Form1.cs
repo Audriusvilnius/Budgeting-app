@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using System.Windows.Markup;
 using System.Windows.Media;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MessageBox = System.Windows.Forms.MessageBox;
@@ -57,7 +58,6 @@ namespace WindowsFormsApp1
         public static List<double> tem1;
         public static List<double> Total_Old;
         public static List<double> Total_New;
-
 
         private class Budget
         {
@@ -192,8 +192,6 @@ namespace WindowsFormsApp1
                 fee = a_fee;
                 expend = a_expend;
                 operCost = a_operCost;
-
-
             }
             public Budget(Budget a)
             {
@@ -203,9 +201,7 @@ namespace WindowsFormsApp1
                 fee = a.fee;
                 expend = a.expend;
                 operCost = a.operCost;
-
             }
-
 
             public double Get_total_sale() => Get_total_salein() * ((profit_Var / 100) + 1);
             public double Get_total_salein() => Get_saleIn * (1 - (portf_Drop / 100)) * ((portf_Gr / 100) + 1) * (saleIn_Var / 100 + 1);
@@ -263,7 +259,6 @@ namespace WindowsFormsApp1
                     return total_fee_old;
                 }
             }
-
             public double Total_fee_New()
             {
                 total_fee_New += Get_total_fee();
@@ -308,6 +303,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
+
             cartesianChart1.AxisX.Add(new Axis
             {
                 Title = "Month",
@@ -321,10 +317,14 @@ namespace WindowsFormsApp1
             });
 
             cartesianChart1.LegendLocation = LegendLocation.Bottom;
+
+            btnLoad.Enabled = false;
+            btnReset.Enabled = false;
+
         }
         private void btn_Read_Click(object sender, EventArgs e)
         {
-            btnLoad.Enabled = true;
+            
 
              data = new List<Budget>();
 
@@ -355,41 +355,15 @@ namespace WindowsFormsApp1
                 }
             }
             else MessageBox.Show("File no selected");
+            btn_Read.Enabled = false;
+            btnLoad.Enabled = true;
         }
         private void btnLoad_Click_1(object sender, EventArgs e)
         {
             groupBox2.Enabled = true;
             groupBox1.Enabled = true;
-
-            //List<Budget> data = new List<Budget>();
-
-            //OpenFileDialog ofd = new OpenFileDialog();
-            //ofd.Filter = "File (*.txt)|*.txt| All file (*.*)|*,*";
-            //ofd.FilterIndex = 1;
-            //ofd.RestoreDirectory = true;
-            //ofd.ShowDialog();
-            //if (ofd.FileName != "")
-            //{
-            //    using (var reader = File.OpenText(ofd.FileName))
-            //    {
-            //        if (!reader.EndOfStream) reader.ReadLine();
-
-            //        while (!reader.EndOfStream)
-            //        {
-            //            string line = reader.ReadLine();
-            //            string[] items = line.Split(',');
-            //            Budget can = new Budget();
-            //            can.SaleOut = Convert.ToDouble(items[0]);        //  Medziagu pardavimo kaina
-            //            can.LabourSaleOut = Convert.ToDouble(items[1]);  //  Paslaugu pardavimo kaina
-            //            can.SaleIn = Convert.ToDouble(items[2]);        //  Prekiu savikaina
-            //            can.Fee = Convert.ToDouble(items[3]);          //  Atliginimai
-            //            can.Expend = Convert.ToDouble(items[4]);         //  Patalpu nuoma, nusidevejimas, paskolos
-            //            can.OperCost = Convert.ToDouble(items[5]);
-            //            data.Add(can);
-            //        }
-            //    }
-            //}
-            //else MessageBox.Show("File no selected");
+            btn_Read.Enabled = false;
+            btnReset.Enabled = true;
 
             Budget value = new Budget<Budget>(data);
 
@@ -541,18 +515,10 @@ namespace WindowsFormsApp1
                     Values = new ChartValues<double>(Total_Old),
                 },
             };
-
-
-           
-
-
-
         }
         private void cartesianChart1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
-
         }
-
         private void numericUpDown1_ValueChanged_1(object sender, EventArgs e)
         {
             portf_Gr = Convert.ToDouble(numericUpDown1.Value);
@@ -790,6 +756,31 @@ namespace WindowsFormsApp1
             tem1 = new List<double> { 0 };
             Total_Old = new List<double> { 0 };
             Total_New = new List<double> { 0 };
+            SaleOut_total_old.Clear();
+            Labor_total.Clear();
+            SaleOut_total.Clear();
+            Labor_total_old.Clear();
+            Sale_In_total.Clear();
+            Sale_In_total_old.Clear();
+            Total_fee.Clear();
+            Total_fee_old.Clear();
+            Total_expend.Clear();
+            Total_expend_old.Clear();
+            Oper_Cost_total.Clear();
+            Oper_Cost_total_old.Clear();
+            Total_value.Clear();
+            Total_value_old.Clear();
+            tem1.Clear();
+            Total_Old.Clear();
+            Total_New.Clear();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            btn_Read.Enabled = true;
+            btnLoad.Enabled = false;
+            btnReset.Enabled = false;
+            data.Clear(); 
             SaleOut_total_old.Clear();
             Labor_total.Clear();
             SaleOut_total.Clear();

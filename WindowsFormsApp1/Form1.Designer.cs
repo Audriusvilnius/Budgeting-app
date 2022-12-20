@@ -140,6 +140,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -175,7 +176,7 @@
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoad.AutoSize = true;
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.btnLoad.Location = new System.Drawing.Point(1574, 1181);
+            this.btnLoad.Location = new System.Drawing.Point(1627, 1181);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(15);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(191, 67);
@@ -622,7 +623,7 @@
             // 
             this.btn_Read.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Read.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.btn_Read.Location = new System.Drawing.Point(1317, 1181);
+            this.btn_Read.Location = new System.Drawing.Point(28, 1174);
             this.btn_Read.Margin = new System.Windows.Forms.Padding(15);
             this.btn_Read.Name = "btn_Read";
             this.btn_Read.Size = new System.Drawing.Size(191, 67);
@@ -1773,6 +1774,20 @@
             this.label28.TabIndex = 40;
             this.label28.Text = "Kategorija";
             // 
+            // btnReset
+            // 
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnReset.AutoSize = true;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.btnReset.Location = new System.Drawing.Point(249, 1174);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(15);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(191, 67);
+            this.btnReset.TabIndex = 38;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -1780,6 +1795,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1874, 1279);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1925,6 +1941,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
