@@ -67,7 +67,13 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -141,6 +147,9 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.label84 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -150,6 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -162,11 +172,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cartesianChart1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cartesianChart1.Font = new System.Drawing.Font("Tahoma", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.cartesianChart1.Location = new System.Drawing.Point(22, 25);
+            this.cartesianChart1.Location = new System.Drawing.Point(23, 25);
             this.cartesianChart1.MinimumSize = new System.Drawing.Size(1200, 720);
             this.cartesianChart1.Name = "cartesianChart1";
             this.cartesianChart1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cartesianChart1.Size = new System.Drawing.Size(1200, 720);
+            this.cartesianChart1.Size = new System.Drawing.Size(1200, 763);
             this.cartesianChart1.TabIndex = 0;
             this.cartesianChart1.Text = "cartesianChart1";
             this.cartesianChart1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.cartesianChart1_ChildChanged);
@@ -176,7 +186,7 @@
             this.btnLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoad.AutoSize = true;
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.btnLoad.Location = new System.Drawing.Point(1627, 1181);
+            this.btnLoad.Location = new System.Drawing.Point(1627, 1224);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(15);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(191, 67);
@@ -188,13 +198,13 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(58, 104);
+            this.radioButton1.Location = new System.Drawing.Point(45, 88);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(10);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(245, 29);
+            this.radioButton1.Size = new System.Drawing.Size(109, 29);
             this.radioButton1.TabIndex = 27;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Periodo pelningumas";
+            this.radioButton1.Text = "Pelnas";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
@@ -609,7 +619,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(58, 153);
+            this.radioButton2.Location = new System.Drawing.Point(45, 133);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(10);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(213, 29);
@@ -621,9 +631,9 @@
             // 
             // btn_Read
             // 
-            this.btn_Read.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Read.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Read.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.btn_Read.Location = new System.Drawing.Point(28, 1174);
+            this.btn_Read.Location = new System.Drawing.Point(28, 1217);
             this.btn_Read.Margin = new System.Windows.Forms.Padding(15);
             this.btn_Read.Name = "btn_Read";
             this.btn_Read.Size = new System.Drawing.Size(191, 67);
@@ -672,7 +682,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(58, 202);
+            this.radioButton3.Location = new System.Drawing.Point(45, 176);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(10);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(326, 29);
@@ -685,7 +695,7 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(58, 349);
+            this.radioButton4.Location = new System.Drawing.Point(45, 321);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(10);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(500, 29);
@@ -698,7 +708,7 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(58, 300);
+            this.radioButton5.Location = new System.Drawing.Point(45, 272);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(10);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(300, 29);
@@ -711,7 +721,7 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(58, 251);
+            this.radioButton6.Location = new System.Drawing.Point(45, 221);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(10);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(271, 29);
@@ -725,7 +735,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.groupBox1.Controls.Add(this.radioButton7);
+            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton4);
             this.groupBox1.Controls.Add(this.radioButton1);
@@ -733,28 +743,103 @@
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton6);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(1237, 758);
+            this.groupBox1.Location = new System.Drawing.Point(1237, 818);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(581, 398);
+            this.groupBox1.Size = new System.Drawing.Size(581, 387);
             this.groupBox1.TabIndex = 36;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // radioButton7
+            // groupBox4
             // 
-            this.radioButton7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.radioButton7.Location = new System.Drawing.Point(56, 55);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(10);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(266, 29);
-            this.radioButton7.TabIndex = 28;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Suminis pelningumas";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.groupBox4.Controls.Add(this.radioButton8);
+            this.groupBox4.Controls.Add(this.radioButton9);
+            this.groupBox4.Controls.Add(this.radioButton10);
+            this.groupBox4.Controls.Add(this.radioButton11);
+            this.groupBox4.Controls.Add(this.radioButton12);
+            this.groupBox4.Controls.Add(this.radioButton13);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox4.Location = new System.Drawing.Point(21, -2125);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(10);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(568, 312);
+            this.groupBox4.TabIndex = 37;
+            this.groupBox4.TabStop = false;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(45, 59);
+            this.radioButton8.Margin = new System.Windows.Forms.Padding(10);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(213, 29);
+            this.radioButton8.TabIndex = 28;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Veiklos sanaudos";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(45, 255);
+            this.radioButton9.Margin = new System.Windows.Forms.Padding(10);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(500, 29);
+            this.radioButton9.TabIndex = 35;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "Patalpu nuoma, nusidevejimas, paskolos, plėtra";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(45, 10);
+            this.radioButton10.Margin = new System.Windows.Forms.Padding(10);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(109, 29);
+            this.radioButton10.TabIndex = 27;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "Pelnas";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(45, 206);
+            this.radioButton11.Margin = new System.Windows.Forms.Padding(10);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(300, 29);
+            this.radioButton11.TabIndex = 34;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.Text = "Darbo užmokesčio išlaidos";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Location = new System.Drawing.Point(45, 108);
+            this.radioButton12.Margin = new System.Windows.Forms.Padding(10);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(326, 29);
+            this.radioButton12.TabIndex = 32;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.Text = "Paslaugu pardavimo pajamos";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Location = new System.Drawing.Point(45, 157);
+            this.radioButton13.Margin = new System.Windows.Forms.Padding(10);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(271, 29);
+            this.radioButton13.TabIndex = 33;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.Text = "Atsargų pirkimo išlaidos";
+            this.radioButton13.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -1041,7 +1126,7 @@
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Location = new System.Drawing.Point(22, 758);
+            this.groupBox3.Location = new System.Drawing.Point(22, 807);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1200, 398);
             this.groupBox3.TabIndex = 37;
@@ -1049,8 +1134,9 @@
             // 
             // label76
             // 
+            this.label76.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label76.AutoSize = true;
-            this.label76.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label76.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label76.Location = new System.Drawing.Point(1020, 336);
             this.label76.Margin = new System.Windows.Forms.Padding(10);
@@ -1062,8 +1148,9 @@
             // 
             // label77
             // 
+            this.label77.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label77.AutoSize = true;
-            this.label77.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label77.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label77.Location = new System.Drawing.Point(1141, 336);
             this.label77.Margin = new System.Windows.Forms.Padding(10);
@@ -1075,8 +1162,9 @@
             // 
             // label78
             // 
+            this.label78.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label78.AutoSize = true;
-            this.label78.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label78.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label78.Location = new System.Drawing.Point(900, 334);
             this.label78.Margin = new System.Windows.Forms.Padding(10);
@@ -1088,8 +1176,9 @@
             // 
             // label79
             // 
+            this.label79.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label79.AutoSize = true;
-            this.label79.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label79.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label79.Location = new System.Drawing.Point(407, 336);
             this.label79.Margin = new System.Windows.Forms.Padding(10);
@@ -1101,8 +1190,9 @@
             // 
             // label80
             // 
+            this.label80.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label80.AutoSize = true;
-            this.label80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label80.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label80.Location = new System.Drawing.Point(510, 334);
             this.label80.Margin = new System.Windows.Forms.Padding(10);
@@ -1114,8 +1204,9 @@
             // 
             // label81
             // 
+            this.label81.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label81.AutoSize = true;
-            this.label81.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label81.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label81.Location = new System.Drawing.Point(756, 332);
             this.label81.Margin = new System.Windows.Forms.Padding(10);
@@ -1127,8 +1218,9 @@
             // 
             // label82
             // 
+            this.label82.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label82.AutoSize = true;
-            this.label82.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label82.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label82.Location = new System.Drawing.Point(255, 334);
             this.label82.Margin = new System.Windows.Forms.Padding(10);
@@ -1140,8 +1232,9 @@
             // 
             // label83
             // 
+            this.label83.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label83.AutoSize = true;
-            this.label83.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label83.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label83.Location = new System.Drawing.Point(13, 332);
             this.label83.Margin = new System.Windows.Forms.Padding(10);
@@ -1153,8 +1246,9 @@
             // 
             // label68
             // 
+            this.label68.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label68.AutoSize = true;
-            this.label68.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label68.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label68.Location = new System.Drawing.Point(1020, 287);
             this.label68.Margin = new System.Windows.Forms.Padding(10);
@@ -1166,8 +1260,9 @@
             // 
             // label69
             // 
+            this.label69.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label69.AutoSize = true;
-            this.label69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label69.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label69.Location = new System.Drawing.Point(1141, 285);
             this.label69.Margin = new System.Windows.Forms.Padding(10);
@@ -1179,8 +1274,9 @@
             // 
             // label70
             // 
+            this.label70.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label70.AutoSize = true;
-            this.label70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label70.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label70.Location = new System.Drawing.Point(900, 285);
             this.label70.Margin = new System.Windows.Forms.Padding(10);
@@ -1192,8 +1288,9 @@
             // 
             // label71
             // 
+            this.label71.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label71.AutoSize = true;
-            this.label71.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label71.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label71.Location = new System.Drawing.Point(407, 287);
             this.label71.Margin = new System.Windows.Forms.Padding(10);
@@ -1205,8 +1302,9 @@
             // 
             // label72
             // 
+            this.label72.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label72.AutoSize = true;
-            this.label72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label72.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label72.Location = new System.Drawing.Point(510, 285);
             this.label72.Margin = new System.Windows.Forms.Padding(10);
@@ -1218,8 +1316,9 @@
             // 
             // label73
             // 
+            this.label73.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label73.AutoSize = true;
-            this.label73.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label73.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label73.Location = new System.Drawing.Point(756, 283);
             this.label73.Margin = new System.Windows.Forms.Padding(10);
@@ -1231,8 +1330,9 @@
             // 
             // label74
             // 
+            this.label74.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label74.AutoSize = true;
-            this.label74.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label74.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label74.Location = new System.Drawing.Point(255, 285);
             this.label74.Margin = new System.Windows.Forms.Padding(10);
@@ -1244,8 +1344,9 @@
             // 
             // label75
             // 
+            this.label75.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label75.AutoSize = true;
-            this.label75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label75.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label75.Location = new System.Drawing.Point(13, 283);
             this.label75.Margin = new System.Windows.Forms.Padding(10);
@@ -1257,8 +1358,9 @@
             // 
             // label60
             // 
+            this.label60.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label60.AutoSize = true;
-            this.label60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label60.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label60.Location = new System.Drawing.Point(1020, 240);
             this.label60.Margin = new System.Windows.Forms.Padding(10);
@@ -1270,8 +1372,9 @@
             // 
             // label61
             // 
+            this.label61.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label61.AutoSize = true;
-            this.label61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label61.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label61.Location = new System.Drawing.Point(1141, 240);
             this.label61.Margin = new System.Windows.Forms.Padding(10);
@@ -1283,8 +1386,9 @@
             // 
             // label62
             // 
+            this.label62.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label62.AutoSize = true;
-            this.label62.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label62.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label62.Location = new System.Drawing.Point(900, 238);
             this.label62.Margin = new System.Windows.Forms.Padding(10);
@@ -1296,8 +1400,9 @@
             // 
             // label63
             // 
+            this.label63.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label63.AutoSize = true;
-            this.label63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label63.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label63.Location = new System.Drawing.Point(407, 240);
             this.label63.Margin = new System.Windows.Forms.Padding(10);
@@ -1309,8 +1414,9 @@
             // 
             // label64
             // 
+            this.label64.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label64.AutoSize = true;
-            this.label64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label64.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label64.Location = new System.Drawing.Point(510, 238);
             this.label64.Margin = new System.Windows.Forms.Padding(10);
@@ -1322,8 +1428,9 @@
             // 
             // label65
             // 
+            this.label65.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label65.AutoSize = true;
-            this.label65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label65.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label65.Location = new System.Drawing.Point(756, 236);
             this.label65.Margin = new System.Windows.Forms.Padding(10);
@@ -1335,8 +1442,9 @@
             // 
             // label66
             // 
+            this.label66.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label66.AutoSize = true;
-            this.label66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label66.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label66.Location = new System.Drawing.Point(255, 238);
             this.label66.Margin = new System.Windows.Forms.Padding(10);
@@ -1348,8 +1456,9 @@
             // 
             // label67
             // 
+            this.label67.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label67.AutoSize = true;
-            this.label67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label67.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label67.Location = new System.Drawing.Point(13, 236);
             this.label67.Margin = new System.Windows.Forms.Padding(10);
@@ -1361,8 +1470,9 @@
             // 
             // label52
             // 
+            this.label52.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label52.AutoSize = true;
-            this.label52.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label52.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label52.Location = new System.Drawing.Point(1020, 195);
             this.label52.Margin = new System.Windows.Forms.Padding(10);
@@ -1374,8 +1484,9 @@
             // 
             // label53
             // 
+            this.label53.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label53.AutoSize = true;
-            this.label53.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label53.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label53.Location = new System.Drawing.Point(1141, 195);
             this.label53.Margin = new System.Windows.Forms.Padding(10);
@@ -1387,8 +1498,9 @@
             // 
             // label54
             // 
+            this.label54.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label54.AutoSize = true;
-            this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label54.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label54.Location = new System.Drawing.Point(900, 193);
             this.label54.Margin = new System.Windows.Forms.Padding(10);
@@ -1400,8 +1512,9 @@
             // 
             // label55
             // 
+            this.label55.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label55.AutoSize = true;
-            this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label55.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label55.Location = new System.Drawing.Point(407, 195);
             this.label55.Margin = new System.Windows.Forms.Padding(10);
@@ -1413,8 +1526,9 @@
             // 
             // label56
             // 
+            this.label56.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label56.AutoSize = true;
-            this.label56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label56.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label56.Location = new System.Drawing.Point(510, 193);
             this.label56.Margin = new System.Windows.Forms.Padding(10);
@@ -1426,8 +1540,9 @@
             // 
             // label57
             // 
+            this.label57.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label57.AutoSize = true;
-            this.label57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label57.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label57.Location = new System.Drawing.Point(756, 191);
             this.label57.Margin = new System.Windows.Forms.Padding(10);
@@ -1439,8 +1554,9 @@
             // 
             // label58
             // 
+            this.label58.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label58.AutoSize = true;
-            this.label58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label58.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label58.Location = new System.Drawing.Point(255, 193);
             this.label58.Margin = new System.Windows.Forms.Padding(10);
@@ -1452,8 +1568,9 @@
             // 
             // label59
             // 
+            this.label59.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label59.AutoSize = true;
-            this.label59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label59.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label59.Location = new System.Drawing.Point(13, 191);
             this.label59.Margin = new System.Windows.Forms.Padding(10);
@@ -1465,8 +1582,9 @@
             // 
             // label44
             // 
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label44.AutoSize = true;
-            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label44.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label44.Location = new System.Drawing.Point(1020, 150);
             this.label44.Margin = new System.Windows.Forms.Padding(10);
@@ -1478,8 +1596,9 @@
             // 
             // label45
             // 
+            this.label45.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label45.AutoSize = true;
-            this.label45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label45.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label45.Location = new System.Drawing.Point(1141, 150);
             this.label45.Margin = new System.Windows.Forms.Padding(10);
@@ -1491,8 +1610,9 @@
             // 
             // label46
             // 
+            this.label46.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label46.AutoSize = true;
-            this.label46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label46.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label46.Location = new System.Drawing.Point(900, 148);
             this.label46.Margin = new System.Windows.Forms.Padding(10);
@@ -1504,8 +1624,9 @@
             // 
             // label47
             // 
+            this.label47.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label47.AutoSize = true;
-            this.label47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label47.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label47.Location = new System.Drawing.Point(407, 150);
             this.label47.Margin = new System.Windows.Forms.Padding(10);
@@ -1517,8 +1638,9 @@
             // 
             // label48
             // 
+            this.label48.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label48.AutoSize = true;
-            this.label48.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label48.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label48.Location = new System.Drawing.Point(510, 148);
             this.label48.Margin = new System.Windows.Forms.Padding(10);
@@ -1530,8 +1652,9 @@
             // 
             // label49
             // 
+            this.label49.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label49.AutoSize = true;
-            this.label49.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label49.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label49.Location = new System.Drawing.Point(756, 146);
             this.label49.Margin = new System.Windows.Forms.Padding(10);
@@ -1543,8 +1666,9 @@
             // 
             // label50
             // 
+            this.label50.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label50.AutoSize = true;
-            this.label50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label50.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label50.Location = new System.Drawing.Point(255, 148);
             this.label50.Margin = new System.Windows.Forms.Padding(10);
@@ -1556,8 +1680,9 @@
             // 
             // label51
             // 
+            this.label51.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label51.AutoSize = true;
-            this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label51.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label51.Location = new System.Drawing.Point(13, 146);
             this.label51.Margin = new System.Windows.Forms.Padding(10);
@@ -1569,8 +1694,9 @@
             // 
             // label36
             // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label36.AutoSize = true;
-            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label36.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label36.Location = new System.Drawing.Point(1020, 105);
             this.label36.Margin = new System.Windows.Forms.Padding(10);
@@ -1582,8 +1708,9 @@
             // 
             // label37
             // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label37.AutoSize = true;
-            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label37.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label37.Location = new System.Drawing.Point(1141, 108);
             this.label37.Margin = new System.Windows.Forms.Padding(10);
@@ -1595,8 +1722,9 @@
             // 
             // label38
             // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label38.AutoSize = true;
-            this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label38.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label38.Location = new System.Drawing.Point(900, 103);
             this.label38.Margin = new System.Windows.Forms.Padding(10);
@@ -1608,8 +1736,9 @@
             // 
             // label39
             // 
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label39.AutoSize = true;
-            this.label39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label39.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label39.Location = new System.Drawing.Point(407, 105);
             this.label39.Margin = new System.Windows.Forms.Padding(10);
@@ -1621,8 +1750,9 @@
             // 
             // label40
             // 
+            this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label40.AutoSize = true;
-            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label40.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label40.Location = new System.Drawing.Point(510, 101);
             this.label40.Margin = new System.Windows.Forms.Padding(10);
@@ -1634,8 +1764,9 @@
             // 
             // label41
             // 
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label41.AutoSize = true;
-            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label41.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label41.Location = new System.Drawing.Point(756, 101);
             this.label41.Margin = new System.Windows.Forms.Padding(10);
@@ -1647,8 +1778,9 @@
             // 
             // label42
             // 
+            this.label42.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label42.AutoSize = true;
-            this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label42.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label42.Location = new System.Drawing.Point(255, 103);
             this.label42.Margin = new System.Windows.Forms.Padding(10);
@@ -1660,8 +1792,9 @@
             // 
             // label43
             // 
+            this.label43.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label43.AutoSize = true;
-            this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label43.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label43.Location = new System.Drawing.Point(13, 101);
             this.label43.Margin = new System.Windows.Forms.Padding(10);
@@ -1673,8 +1806,9 @@
             // 
             // label35
             // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
-            this.label35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label35.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label35.Location = new System.Drawing.Point(1020, 59);
             this.label35.Margin = new System.Windows.Forms.Padding(10);
@@ -1686,8 +1820,9 @@
             // 
             // label34
             // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label34.AutoSize = true;
-            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label34.Location = new System.Drawing.Point(1141, 59);
             this.label34.Margin = new System.Windows.Forms.Padding(10);
@@ -1699,8 +1834,9 @@
             // 
             // label33
             // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label33.AutoSize = true;
-            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label33.Location = new System.Drawing.Point(900, 57);
             this.label33.Margin = new System.Windows.Forms.Padding(10);
@@ -1711,8 +1847,9 @@
             // 
             // label32
             // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label32.AutoSize = true;
-            this.label32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label32.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label32.Location = new System.Drawing.Point(407, 59);
             this.label32.Margin = new System.Windows.Forms.Padding(10);
@@ -1724,8 +1861,9 @@
             // 
             // label31
             // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label31.AutoSize = true;
-            this.label31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label31.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label31.Location = new System.Drawing.Point(510, 57);
             this.label31.Margin = new System.Windows.Forms.Padding(10);
@@ -1737,8 +1875,9 @@
             // 
             // label30
             // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label30.AutoSize = true;
-            this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label30.Location = new System.Drawing.Point(664, 55);
             this.label30.Margin = new System.Windows.Forms.Padding(10);
@@ -1750,8 +1889,9 @@
             // 
             // label29
             // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label29.AutoSize = true;
-            this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label29.Location = new System.Drawing.Point(255, 57);
             this.label29.Margin = new System.Windows.Forms.Padding(10);
@@ -1763,8 +1903,9 @@
             // 
             // label28
             // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.AutoSize = true;
-            this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.label28.Location = new System.Drawing.Point(13, 55);
             this.label28.Margin = new System.Windows.Forms.Padding(10);
@@ -1779,7 +1920,7 @@
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnReset.AutoSize = true;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.btnReset.Location = new System.Drawing.Point(249, 1174);
+            this.btnReset.Location = new System.Drawing.Point(249, 1217);
             this.btnReset.Margin = new System.Windows.Forms.Padding(15);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(191, 67);
@@ -1788,17 +1929,62 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // radioButton7
+            // 
+            this.radioButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(1671, 769);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(10);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(94, 29);
+            this.radioButton7.TabIndex = 38;
+            this.radioButton7.Text = "Verte";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
+            // 
+            // radioButton14
+            // 
+            this.radioButton14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.Checked = true;
+            this.radioButton14.Location = new System.Drawing.Point(1549, 769);
+            this.radioButton14.Margin = new System.Windows.Forms.Padding(10);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(98, 29);
+            this.radioButton14.TabIndex = 39;
+            this.radioButton14.TabStop = true;
+            this.radioButton14.Text = "Suma";
+            this.radioButton14.UseVisualStyleBackColor = true;
+            this.radioButton14.CheckedChanged += new System.EventHandler(this.radioButton14_CheckedChanged);
+            // 
+            // label84
+            // 
+            this.label84.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label84.AutoSize = true;
+            this.label84.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.label84.Location = new System.Drawing.Point(1290, 771);
+            this.label84.Margin = new System.Windows.Forms.Padding(10);
+            this.label84.Name = "label84";
+            this.label84.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label84.Size = new System.Drawing.Size(224, 25);
+            this.label84.TabIndex = 94;
+            this.label84.Text = "Grafiko atvaizdavimas";
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1874, 1279);
+            this.ClientSize = new System.Drawing.Size(1874, 1322);
+            this.Controls.Add(this.label84);
+            this.Controls.Add(this.radioButton14);
             this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.radioButton7);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.numericUpDown8);
             this.Controls.Add(this.btn_Read);
@@ -1819,6 +2005,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1869,7 +2057,6 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label27;
@@ -1942,6 +2129,16 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton14;
+        private System.Windows.Forms.Label label84;
     }
 }
 

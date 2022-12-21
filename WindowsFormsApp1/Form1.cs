@@ -38,8 +38,15 @@ namespace WindowsFormsApp1
         public static double total_old = 0;
         public static double total_new = 0;
         public static int point_size = 9;
+        public static int option = 1;
 
         List<Budget> data;
+
+        public static int Fee_New_sum = 0;
+        public static int Fee_Old_sum = 0;
+        public static int Total_New_sum = 0;
+        public static int Total_Old_sum = 0;
+
 
         public static List<double> SaleOut_total;
         public static List<double> SaleOut_total_old;
@@ -48,7 +55,9 @@ namespace WindowsFormsApp1
         public static List<double> Sale_In_total;
         public static List<double> Sale_In_total_old;
         public static List<double> Total_fee;
+        public static List<double> Total_fee_New;
         public static List<double> Total_fee_old;
+        public static List<double> Total_fee_old_sum;
         public static List<double> Total_expend;
         public static List<double> Total_expend_old;
         public static List<double> Oper_Cost_total;
@@ -100,6 +109,9 @@ namespace WindowsFormsApp1
 
 
             public object radioButton1_CheckedChanged_1;
+            public object radioButton7;
+            public object radioButton22;
+            public object radioButton14;
             public object btn_Read_Click;
 
 
@@ -251,7 +263,7 @@ namespace WindowsFormsApp1
                 total_saleIn_New += Get_total_salein();
                 return total_saleIn_New;
             }
-            public double Total_fee_old
+            public double Total_fee_old_sum
             {
                 get
                 {
@@ -259,11 +271,15 @@ namespace WindowsFormsApp1
                     return total_fee_old;
                 }
             }
-            public double Total_fee_New()
+            public double Total_fee_New
             {
-                total_fee_New += Get_total_fee();
-                return total_fee_New;
+                get
+                {
+                    total_fee_New += Get_total_fee();
+                    return total_fee_New;
+                }
             }
+
             public double Total_expend_old()
             {
                 total_expend_old += Get_expend;
@@ -324,9 +340,9 @@ namespace WindowsFormsApp1
         }
         private void btn_Read_Click(object sender, EventArgs e)
         {
-            
 
-             data = new List<Budget>();
+
+            data = new List<Budget>();
 
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "File (*.txt)|*.txt| All file (*.*)|*,*";
@@ -464,6 +480,8 @@ namespace WindowsFormsApp1
                 value = data[i];
                 Oper_Cost_total_old.Add(value.Get_operCost);
             }
+            //Total_New_sum = 0;
+            //Total_Old_sum = 0;
 
             Total_Old = new List<double>();
             for (int i = 0; i < data.Count; i++)
@@ -471,17 +489,62 @@ namespace WindowsFormsApp1
                 value = data[i];
                 Total_Old.Add(value.Total_Old);
             }
+            for (int i = 0; i < data.Count; i++)
+            {
+                Total_Old_sum = (int)Total_Old[i];
+
+            }
+
             Total_New = new List<double>();
             for (int i = 0; i < data.Count; i++)
             {
                 value = data[i];
                 Total_New.Add(value.Total_New);
             }
+            for (int i = 0; i < data.Count; i++)
+            {
+                Total_New_sum = (int)Total_New[i];
+
+            }
 
 
-            double id = value.Total_fee_old;
 
-            label29.Text = Convert.ToString(id);
+
+
+            Total_fee_old_sum = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                value = data[i];
+                Total_fee_old_sum.Add(value.Total_fee_old_sum);
+            }
+            for (int i = 0; i < Total_fee_old_sum.Count; i++)
+            {
+                Fee_Old_sum = (int)Total_fee_old_sum[i];
+
+            }
+            Total_fee_New = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                value = data[i];
+                Total_fee_New.Add(value.Total_fee_New);
+            }
+            for (int i = 0; i < Total_fee_New.Count; i++)
+            {
+                Fee_New_sum = (int)Total_fee_New[i];
+
+            }
+
+
+            label74.Text = Convert.ToString(Fee_Old_sum);
+            label73.Text = Convert.ToString(Fee_New_sum);
+            label72.Text = Convert.ToString(Fee_New_sum - Fee_Old_sum);
+            label68.Text = Convert.ToString(((Fee_New_sum - Fee_Old_sum)/ (float)Fee_Old_sum)*100);
+
+            label42.Text = Convert.ToString(Total_Old_sum);
+            label41.Text = Convert.ToString(Total_New_sum);
+            label40.Text = Convert.ToString(Total_New_sum - Total_Old_sum);
+            label36.Text = Convert.ToString(((Total_New_sum - Total_Old_sum) / (float)Total_Old_sum) * 100);
+
 
 
             tem1 = new List<double>();
@@ -583,7 +646,10 @@ namespace WindowsFormsApp1
         }
         private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
         {
-            cartesianChart1.Series = new SeriesCollection
+            if (option == 0)
+            {
+
+                cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
                 {
@@ -608,6 +674,35 @@ namespace WindowsFormsApp1
                     Values = new ChartValues<double>(Total_value_old),
                 },
             };
+            }
+            if (option == 1)
+            {
+
+            cartesianChart1.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Prognozuojamos vertes",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Circle,
+                    Values = new ChartValues<double>(Total_New),
+                },
+                new LineSeries
+                {
+                    Title = "",
+                    PointGeometry = null,
+                    Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0)),
+                    Values = new ChartValues<double>(tem1)
+                },
+                 new LineSeries
+                {
+                    Title = "Pateiktos vertes",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Square,
+                    Values = new ChartValues<double>(Total_Old),
+                },
+            };
+            }
         }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
@@ -672,7 +767,9 @@ namespace WindowsFormsApp1
         }
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
-            cartesianChart1.Series = new SeriesCollection
+            if (option == 0)
+            {
+                cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
                 {
@@ -689,6 +786,29 @@ namespace WindowsFormsApp1
                     Values = new ChartValues<double>(Total_fee_old),
                 },
             };
+            }
+
+            if (option == 1)
+            {
+
+                cartesianChart1.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Darbo užmokesčio sanaudos",
+                    Values = new ChartValues<double>(Total_fee_New),
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Circle,
+                },
+                new LineSeries
+                {
+                    Title = "Pateiktos vertes",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Square,
+                    Values = new ChartValues<double>(Total_fee_old_sum),
+                },
+            };
+            }
         }
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
@@ -710,33 +830,7 @@ namespace WindowsFormsApp1
                 },
             };
         }
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
-        {
-            cartesianChart1.Series = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Title = "Prognozuojamos vertes",
-                    PointGeometrySize = point_size,
-                    PointGeometry = DefaultGeometries.Circle,
-                    Values = new ChartValues<double>(Total_New),
-                },
-                new LineSeries
-                {
-                    Title = "",
-                    PointGeometry = null,
-                    Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0)),
-                    Values = new ChartValues<double>(tem1)
-                },
-                 new LineSeries
-                {
-                    Title = "Pateiktos vertes",
-                    PointGeometrySize = point_size,
-                    PointGeometry = DefaultGeometries.Square,
-                    Values = new ChartValues<double>(Total_Old),
-                },
-            };
-        }
+
         private void Form1_Closing(object sender, FormClosingEventArgs e)
         {
             SaleOut_total_old = new List<double> { 0 };
@@ -777,10 +871,11 @@ namespace WindowsFormsApp1
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+
             btn_Read.Enabled = true;
             btnLoad.Enabled = false;
             btnReset.Enabled = false;
-            data.Clear(); 
+            data.Clear();
             SaleOut_total_old.Clear();
             Labor_total.Clear();
             SaleOut_total.Clear();
@@ -798,6 +893,21 @@ namespace WindowsFormsApp1
             tem1.Clear();
             Total_Old.Clear();
             Total_New.Clear();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton7_CheckedChanged(object sender, EventArgs e)
+        {
+            option = 0;
+        }
+
+        private void radioButton14_CheckedChanged(object sender, EventArgs e)
+        {
+            option = 1;
         }
     }
 }
