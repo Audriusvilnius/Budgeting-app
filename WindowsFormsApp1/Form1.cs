@@ -46,6 +46,8 @@ namespace WindowsFormsApp1
         public static int Fee_Old_sum = 0;
         public static int Total_New_sum = 0;
         public static int Total_Old_sum = 0;
+        public static int Total_sale_new_sum=0;
+        public static int Total_sale_old_sum=0;
 
 
         public static List<double> SaleOut_total;
@@ -67,6 +69,8 @@ namespace WindowsFormsApp1
         public static List<double> tem1;
         public static List<double> Total_Old;
         public static List<double> Total_New;
+        public static List<double> Total_sale_new;
+        public static List<double> Total_sale_old;
 
         private class Budget
         {
@@ -243,16 +247,24 @@ namespace WindowsFormsApp1
                     return total_new;
                 }
             }
-            public double Total_saleOut_old()
+            public double Total_saleOut_old
             {
-                total_saleOut_old += saleOut;
-                return total_saleOut_old;
+                get
+                {
+                    total_saleOut_old += saleOut;
+                    return total_saleOut_old;
+                }
             }
-            public double Total_saleOut_New()
+
+            public double Total_saleOut_New
             {
-                total_saleOut_New += Get_total_sale();
-                return total_saleOut_New;
+                get
+                {
+                    total_saleOut_New += Get_total_sale();
+                    return total_saleOut_New;
+                }
             }
+
             public double Total_saleIn_old()
             {
                 total_saleIn_old += Get_saleIn;
@@ -295,26 +307,9 @@ namespace WindowsFormsApp1
                 total_operCost_old += Get_expend;
                 return total_operCost_old;
             }
-            public double Total_operCost_New
-            {
-                get
-                {
-                    total_operCost_New += Get_total_expend();
-                    return total_operCost_New;
-                }
-            }
-        }
-        //static double Total_operCost_New { get; }
 
-        //total_saleOut_New = 0;
-        //        total_saleIn_old = 0;
-        //        total_saleIn_New = 0;
-        //        total_fee_old = 0;
-        //        total_fee_New = 0;
-        //        total_expend_old = 0;
-        //        total_expend_New = 0;
-        //        total_operCost_old = 0;
-        //       total_operCost_New = 0;
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -480,8 +475,6 @@ namespace WindowsFormsApp1
                 value = data[i];
                 Oper_Cost_total_old.Add(value.Get_operCost);
             }
-            //Total_New_sum = 0;
-            //Total_Old_sum = 0;
 
             Total_Old = new List<double>();
             for (int i = 0; i < data.Count; i++)
@@ -534,6 +527,36 @@ namespace WindowsFormsApp1
 
             }
 
+            // Total_sale_new_sum = 0;
+            // Total_sale_old_sum = 0;
+            //public static List<double> Total_sale_new;
+            //public static List<double> Total_sale_old;
+
+            Total_sale_new = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                value = data[i];
+                Total_sale_new.Add(value.Total_saleOut_New);
+            }
+            for (int i = 0; i < Total_sale_new.Count; i++)
+            {
+                Total_sale_new_sum = (int)Total_sale_new[i];
+
+            }
+            Total_sale_old = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                value = data[i];
+                Total_sale_old.Add(value.Total_saleOut_old);
+            }
+            for (int i = 0; i < Total_sale_old.Count; i++)
+            {
+                Total_sale_old_sum = (int)Total_sale_old[i];
+
+            }
+
+
+
 
             label74.Text = Convert.ToString(Fee_Old_sum);
             label73.Text = Convert.ToString(Fee_New_sum);
@@ -544,6 +567,11 @@ namespace WindowsFormsApp1
             label41.Text = Convert.ToString(Total_New_sum);
             label40.Text = Convert.ToString(Total_New_sum - Total_Old_sum);
             label36.Text = Convert.ToString(((Total_New_sum - Total_Old_sum) / (float)Total_Old_sum) * 100);
+
+            label66.Text = Convert.ToString(Total_sale_old_sum);
+            label65.Text = Convert.ToString(Total_sale_new_sum);
+            label64.Text = Convert.ToString(Total_sale_new_sum - Total_sale_old_sum);
+            label60.Text = Convert.ToString(((Total_sale_new_sum - Total_sale_old_sum) / (float)Total_sale_old_sum) * 100);
 
 
 
@@ -747,12 +775,15 @@ namespace WindowsFormsApp1
         }
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
-            cartesianChart1.Series = new SeriesCollection
+            if (option == 0)
             {
+                cartesianChart1.Series = new SeriesCollection
+            {
+
                 new LineSeries
                 {
                     Title = "Atsargų pirkimo išlaidos",
-                    Values = new ChartValues<double>(Sale_In_total),
+                    Values = new ChartValues<double>(SaleOut_total),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                 },
@@ -761,9 +792,33 @@ namespace WindowsFormsApp1
                     Title = "Pateiktos vertes",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
-                    Values = new ChartValues<double>(Sale_In_total_old),
+                    Values = new ChartValues<double>(SaleOut_total_old),
                 },
             };
+
+            }
+            if (option == 1)
+            {
+                cartesianChart1.Series = new SeriesCollection
+            {
+
+                new LineSeries
+                {
+                    Title = "Atsargų pirkimo išlaidos",
+                    Values = new ChartValues<double>(Total_sale_new),
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Circle,
+                },
+                new LineSeries
+                {
+                    Title = "Pateiktos vertes",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Square,
+                    Values = new ChartValues<double>(Total_sale_old),
+                },
+            };
+
+            }
         }
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {

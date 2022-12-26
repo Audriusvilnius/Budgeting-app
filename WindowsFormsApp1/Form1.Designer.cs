@@ -724,10 +724,10 @@
             this.radioButton6.Location = new System.Drawing.Point(45, 221);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(10);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(271, 29);
+            this.radioButton6.Size = new System.Drawing.Size(310, 29);
             this.radioButton6.TabIndex = 33;
             this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Atsargų pirkimo išlaidos";
+            this.radioButton6.Text = "Atsargų pardavimo pajamos";
             this.radioButton6.UseVisualStyleBackColor = true;
             this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
