@@ -22,6 +22,8 @@ namespace WindowsFormsApp1
                 this.data = data;
             }
         }
+        List<Budget> data;
+
         public static double portf_Gr = 10;
         public static double portf_Drop = 10;
         public static double portfolio = 1300;
@@ -40,8 +42,6 @@ namespace WindowsFormsApp1
         public static int point_size = 9;
         public static int option = 1;
 
-        List<Budget> data;
-
         public static int Fee_New_sum = 0;
         public static int Fee_Old_sum = 0;
         public static int Total_New_sum = 0;
@@ -49,37 +49,39 @@ namespace WindowsFormsApp1
         public static int Total_sale_new_sum = 0;
         public static int Total_sale_old_sum = 0;
         public static int Total_Labor_new_sum = 0;
-        public static int Total_Labor_old_sum = 0; 
+        public static int Total_Labor_old_sum = 0;
         public static int Total_Expand_new_sum = 0;
         public static int Total_Expand_old_sum = 0;
+        public static int Total_Oper_Cost_new_sum = 0;
+        public static int Total_Oper_Cost_old_sum = 0;
 
-
-
-        public static List<double> SaleOut_total;
-        public static List<double> SaleOut_total_old;
-        public static List<double> Labor_total;
-        public static List<double> Labor_total_old;
-        public static List<double> Sale_In_total;
-        public static List<double> Sale_In_total_old;
-        public static List<double> Total_fee;
-        public static List<double> Total_fee_New;
-        public static List<double> Total_fee_old;
-        public static List<double> Total_fee_old_sum;
-        public static List<double> Total_expend;
-        public static List<double> Total_expend_old;
-        public static List<double> Oper_Cost_total;
-        public static List<double> Oper_Cost_total_old;
-        public static List<double> Total_value;
-        public static List<double> Total_value_old;
-        public static List<double> tem1;
-        public static List<double> Total_Old;
-        public static List<double> Total_New;
-        public static List<double> Total_sale_new;
-        public static List<double> Total_sale_old;
-        public static List<double> Labor_total_new_line;
-        public static List<double> Labor_total_old_line;
-        public static List<double> Expand_total_old_line;
-        public static List<double> Expand_total_new_line;
+        private List<double> SaleOut_total;
+        private List<double> SaleOut_total_old;
+        private List<double> Labor_total;
+        private List<double> Labor_total_old;
+        private List<double> Sale_In_total;
+        private List<double> Sale_In_total_old;
+        private List<double> Total_fee;
+        private List<double> Total_fee_New;
+        private List<double> Total_fee_old;
+        private List<double> Total_fee_old_sum;
+        private List<double> Total_expend;
+        private List<double> Total_expend_old;
+        private List<double> Oper_Cost_total;
+        private List<double> Oper_Cost_total_old;
+        private List<double> Total_value;
+        private List<double> Total_value_old;
+        private List<double> tem1;
+        private List<double> Total_Old;
+        private List<double> Total_New;
+        private List<double> Total_sale_new;
+        private List<double> Total_sale_old;
+        private List<double> Labor_total_new_line;
+        private List<double> Labor_total_old_line;
+        private List<double> Expand_total_old_line;
+        private List<double> Expand_total_new_line;
+        private List<double> Oper_Cost_total_old_line;
+        private List<double> Oper_Cost_total_new_line;
 
         private class Budget
         {
@@ -104,7 +106,6 @@ namespace WindowsFormsApp1
             static double total_labor_New;
             static double total_labor_Old;
 
-
             public object numericUpDown1;
             public object numericUpDown2;
             public object numericUpDown3;
@@ -114,21 +115,17 @@ namespace WindowsFormsApp1
             public object numericUpDown7;
             public object numericUpDown8;
             public object label28;
-
             public object textBox1;
             public object textBox2;
             public object textBox3;
             public object textBox4;
             public object textBox5;
             public object textBox6;
-
-
             public object radioButton1_CheckedChanged_1;
             public object radioButton7;
             public object radioButton22;
             public object radioButton14;
             public object btn_Read_Click;
-
 
             public double Get_saleOut
             {
@@ -326,7 +323,6 @@ namespace WindowsFormsApp1
                     return total_expend_old;
                 }
             }
-
             public double Total_expend_New
             {
                 get
@@ -335,18 +331,22 @@ namespace WindowsFormsApp1
                     return total_expend_New;
                 }
             }
-
-            public double Total_operCost_old()
+            public double Total_operCost_old
             {
-                total_operCost_old += Get_expend;
-                return total_operCost_old;
+                get
+                {
+                    total_operCost_old += Get_operCost;
+                    return total_operCost_old;
+                }
             }
-            public double Total_operCost_new()
+            public double Total_operCost_new
             {
-                total_operCost_new += Get_total_operCost();
-                return total_operCost_new;
+                get
+                {
+                    total_operCost_new += Get_total_operCost();
+                    return total_operCost_new;
+                }
             }
-
         }
 
         public Form1()
@@ -374,8 +374,6 @@ namespace WindowsFormsApp1
         }
         private void btn_Read_Click(object sender, EventArgs e)
         {
-
-
             data = new List<Budget>();
 
             OpenFileDialog ofd = new OpenFileDialog();
@@ -599,10 +597,7 @@ namespace WindowsFormsApp1
             {
                 Total_Labor_old_sum = (int)Labor_total_old_line[i];
             }
-            //List<double> Expand_total_old_line;
-            // List<double> Expand_total_new_line;
-            // Total_Expand_new_sum = 0;
-            // Total_Expand_old_sum = 0;
+
             Expand_total_new_line = new List<double>();
             for (int i = 0; i < data.Count; i++)
             {
@@ -624,21 +619,44 @@ namespace WindowsFormsApp1
                 Total_Expand_old_sum = (int)Expand_total_old_line[i];
             }
 
+            Oper_Cost_total_new_line = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                value = data[i];
+                Oper_Cost_total_new_line.Add(value.Total_operCost_new);
+            }
+            for (int i = 0; i < Oper_Cost_total_new_line.Count; i++)
+            {
+                Total_Oper_Cost_new_sum = (int)Oper_Cost_total_new_line[i];
+            }
+            Oper_Cost_total_old_line = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                value = data[i];
+                Oper_Cost_total_old_line.Add(value.Total_operCost_old);
+            }
+            for (int i = 0; i < Oper_Cost_total_old_line.Count; i++)
+            {
+                Total_Oper_Cost_old_sum = (int)Oper_Cost_total_old_line[i];
+            }
 
-
-
+            tem1 = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                tem1.Add(0);
+            }
 
             label74.Text = Convert.ToString(Fee_Old_sum);
             label73.Text = Convert.ToString(Fee_New_sum);
             label72.Text = Convert.ToString(Fee_New_sum - Fee_Old_sum);
-            double tf = ((Fee_New_sum - Fee_Old_sum) / (float)Fee_Old_sum) * 100;
+            double tf = ((Fee_New_sum - Fee_Old_sum) / (double)Fee_Old_sum) * 100;
             tf = Math.Round(tf, 2);
             label68.Text = Convert.ToString(tf);
 
             label42.Text = Convert.ToString(Total_Old_sum);
             label41.Text = Convert.ToString(Total_New_sum);
             label40.Text = Convert.ToString(Total_New_sum - Total_Old_sum);
-            double tn = ((Total_New_sum - Total_Old_sum) / (float)Total_Old_sum) * 100;
+            double tn = ((Total_New_sum - Total_Old_sum) / (double)Total_Old_sum) * 100;
             tn = Math.Round(tn, 2);
             label36.Text = Convert.ToString(tn);
 
@@ -663,13 +681,19 @@ namespace WindowsFormsApp1
             te = Math.Round(te, 2);
             label76.Text = Convert.ToString(te);
 
+            label50.Text = Convert.ToString(Total_Oper_Cost_old_sum);
+            label49.Text = Convert.ToString(Total_Oper_Cost_new_sum);
+            label48.Text = Convert.ToString(Total_Oper_Cost_new_sum - Total_Oper_Cost_old_sum);
+            double to = ((Total_Oper_Cost_new_sum - Total_Oper_Cost_old_sum) / (double)Total_Oper_Cost_old_sum) * 100;
+            to = Math.Round(to, 2);
+            label44.Text = Convert.ToString(to);
 
-
-            tem1 = new List<double>();
-            for (int i = 0; i < data.Count; i++)
-            {
-                tem1.Add(0);
-            }
+            label98.Text = Convert.ToString(Total_sale_old_sum + Total_Labor_old_sum);
+            label97.Text = Convert.ToString(Total_sale_new_sum + Total_Labor_new_sum);
+            label96.Text = Convert.ToString(Total_sale_new_sum + Total_Labor_new_sum - Total_sale_old_sum + Total_Labor_old_sum);
+            double tv = ((Total_sale_new_sum + Total_Labor_new_sum - Total_sale_old_sum - Total_Labor_old_sum) / ((double)Total_sale_old_sum + (double)Total_Labor_old_sum)) * 100;
+            tv = Math.Round(tv, 2);
+            label92.Text = Convert.ToString(tv);
 
             cartesianChart1.Series = new SeriesCollection
             {
@@ -823,7 +847,9 @@ namespace WindowsFormsApp1
         }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            cartesianChart1.Series = new SeriesCollection
+            if (option == 0)
+            {
+                cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
                 {
@@ -840,6 +866,27 @@ namespace WindowsFormsApp1
                     Values = new ChartValues<double>(Oper_Cost_total_old),
                 },
             };
+            }
+            if (option == 1)
+            {
+                cartesianChart1.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Veiklos sanaudos",
+                    Values = new ChartValues<double>(Oper_Cost_total_new_line),
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Circle,
+                },
+                new LineSeries
+                {
+                    Title = "Pateiktos vertės",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Square,
+                    Values = new ChartValues<double>(Oper_Cost_total_old_line),
+                },
+            };
+            }
         }
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
@@ -983,7 +1030,7 @@ namespace WindowsFormsApp1
         {
             if (option == 0)
             {
-            cartesianChart1.Series = new SeriesCollection
+                cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
                 {
@@ -1022,7 +1069,6 @@ namespace WindowsFormsApp1
             };
             }
         }
-
         private void Form1_Closing(object sender, FormClosingEventArgs e)
         {
             SaleOut_total_old = new List<double> { 0 };
@@ -1048,16 +1094,16 @@ namespace WindowsFormsApp1
             Total_sale_new = new List<double> { 0 };
             Total_fee_New = new List<double> { 0 };
             Total_fee_old_sum = new List<double> { 0 };
-            Expand_total_old_line= new List<double> { 0 };
+            Expand_total_old_line = new List<double> { 0 };
             Expand_total_new_line = new List<double> { 0 };
+            Oper_Cost_total_new_line = new List<double> { 0 };
+            Oper_Cost_total_old_line = new List<double> { 0 };
 
-            Expand_total_new_line.Clear();
-            Expand_total_old_line.Clear();
+            tem1.Clear();
+            Total_New.Clear();
+            Total_Old.Clear();
             Total_fee_New.Clear();
             Total_fee_old_sum.Clear();
-            SaleOut_total_old.Clear();
-            Labor_total_old_line.Clear();
-            Labor_total_new_line.Clear();
             Total_sale_old.Clear();
             Total_sale_new.Clear();
             Labor_total.Clear();
@@ -1073,14 +1119,16 @@ namespace WindowsFormsApp1
             Oper_Cost_total_old.Clear();
             Total_value.Clear();
             Total_value_old.Clear();
-            tem1.Clear();
-            Total_Old.Clear();
-            Total_New.Clear();
+            SaleOut_total_old.Clear();
+            Labor_total_old_line.Clear();
+            Labor_total_new_line.Clear();
+            Expand_total_old_line.Clear();
+            Expand_total_new_line.Clear();
+            Oper_Cost_total_old_line.Clear();
+            Oper_Cost_total_new_line.Clear();
         }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
-
             btn_Read.Enabled = true;
             btnLoad.Enabled = false;
             btnReset.Enabled = false;
@@ -1094,9 +1142,11 @@ namespace WindowsFormsApp1
             Total_Labor_old_sum = 0;
             Total_Expand_new_sum = 0;
             Total_Expand_old_sum = 0;
+            Total_Oper_Cost_new_sum = 0;
+            Total_Oper_Cost_old_sum = 0;
 
-
-
+            Oper_Cost_total_new_line.Clear();
+            Oper_Cost_total_old_line.Clear();
             Expand_total_new_line.Clear();
             Expand_total_old_line.Clear();
             Total_fee_New.Clear();
@@ -1122,7 +1172,6 @@ namespace WindowsFormsApp1
             tem1.Clear();
             Total_Old.Clear();
             Total_New.Clear();
-
 
             label74.Text = Convert.ToString(Fee_Old_sum);
             label73.Text = Convert.ToString(Fee_New_sum);
@@ -1143,11 +1192,21 @@ namespace WindowsFormsApp1
             label57.Text = Convert.ToString(Total_Labor_new_sum);
             label56.Text = Convert.ToString(Total_Labor_new_sum - Total_Labor_old_sum);
             label52.Text = Convert.ToString(0);
+
             label82.Text = Convert.ToString(Total_Expand_old_sum);
             label81.Text = Convert.ToString(Total_Expand_new_sum);
             label80.Text = Convert.ToString(Total_Expand_new_sum - Total_Expand_old_sum);
             label76.Text = Convert.ToString(0);
 
+            label50.Text = Convert.ToString(Total_Oper_Cost_old_sum);
+            label49.Text = Convert.ToString(Total_Oper_Cost_new_sum);
+            label48.Text = Convert.ToString(Total_Oper_Cost_new_sum - Total_Oper_Cost_old_sum);
+            label44.Text = Convert.ToString(0);
+
+            label98.Text = Convert.ToString(Total_sale_old_sum + Total_Labor_old_sum);
+            label97.Text = Convert.ToString(Total_sale_new_sum + Total_Labor_new_sum);
+            label96.Text = Convert.ToString(Total_sale_new_sum + Total_Labor_new_sum - Total_sale_old_sum + Total_Labor_old_sum);
+            label92.Text = Convert.ToString(0);
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
