@@ -49,7 +49,9 @@ namespace WindowsFormsApp1
         public static int Total_sale_new_sum = 0;
         public static int Total_sale_old_sum = 0;
         public static int Total_Labor_new_sum = 0;
-        public static int Total_Labor_old_sum = 0;
+        public static int Total_Labor_old_sum = 0; 
+        public static int Total_Expand_new_sum = 0;
+        public static int Total_Expand_old_sum = 0;
 
 
 
@@ -76,6 +78,8 @@ namespace WindowsFormsApp1
         public static List<double> Total_sale_old;
         public static List<double> Labor_total_new_line;
         public static List<double> Labor_total_old_line;
+        public static List<double> Expand_total_old_line;
+        public static List<double> Expand_total_new_line;
 
         private class Budget
         {
@@ -314,16 +318,24 @@ namespace WindowsFormsApp1
                     return total_labor_New;
                 }
             }
-            public double Total_expend_old()
+            public double Total_expend_old
             {
-                total_expend_old += Get_expend;
-                return total_expend_old;
+                get
+                {
+                    total_expend_old += Get_expend;
+                    return total_expend_old;
+                }
             }
-            public double Total_expend_New()
+
+            public double Total_expend_New
             {
-                total_expend_New += Get_total_expend();
-                return total_expend_New;
+                get
+                {
+                    total_expend_New += Get_total_expend();
+                    return total_expend_New;
+                }
             }
+
             public double Total_operCost_old()
             {
                 total_operCost_old += Get_expend;
@@ -512,7 +524,6 @@ namespace WindowsFormsApp1
             for (int i = 0; i < data.Count; i++)
             {
                 Total_Old_sum = (int)Total_Old[i];
-
             }
 
             Total_New = new List<double>();
@@ -524,7 +535,6 @@ namespace WindowsFormsApp1
             for (int i = 0; i < data.Count; i++)
             {
                 Total_New_sum = (int)Total_New[i];
-
             }
 
             Total_fee_old_sum = new List<double>();
@@ -536,7 +546,6 @@ namespace WindowsFormsApp1
             for (int i = 0; i < Total_fee_old_sum.Count; i++)
             {
                 Fee_Old_sum = (int)Total_fee_old_sum[i];
-
             }
             Total_fee_New = new List<double>();
             for (int i = 0; i < data.Count; i++)
@@ -547,7 +556,6 @@ namespace WindowsFormsApp1
             for (int i = 0; i < Total_fee_New.Count; i++)
             {
                 Fee_New_sum = (int)Total_fee_New[i];
-
             }
 
             Total_sale_new = new List<double>();
@@ -559,7 +567,6 @@ namespace WindowsFormsApp1
             for (int i = 0; i < Total_sale_new.Count; i++)
             {
                 Total_sale_new_sum = (int)Total_sale_new[i];
-
             }
             Total_sale_old = new List<double>();
             for (int i = 0; i < data.Count; i++)
@@ -570,12 +577,8 @@ namespace WindowsFormsApp1
             for (int i = 0; i < Total_sale_old.Count; i++)
             {
                 Total_sale_old_sum = (int)Total_sale_old[i];
-
             }
-            // Total_Labor_new_sum = 0;
-            //Total_Labor_old_sum = 0;
-            //List<double> Labor_total_new_line;
-            // List<double> Labor_total_old_line;
+
             Labor_total_new_line = new List<double>();
             for (int i = 0; i < data.Count; i++)
             {
@@ -585,7 +588,6 @@ namespace WindowsFormsApp1
             for (int i = 0; i < Labor_total_new_line.Count; i++)
             {
                 Total_Labor_new_sum = (int)Labor_total_new_line[i];
-
             }
             Labor_total_old_line = new List<double>();
             for (int i = 0; i < data.Count; i++)
@@ -596,8 +598,34 @@ namespace WindowsFormsApp1
             for (int i = 0; i < Labor_total_old_line.Count; i++)
             {
                 Total_Labor_old_sum = (int)Labor_total_old_line[i];
-
             }
+            //List<double> Expand_total_old_line;
+            // List<double> Expand_total_new_line;
+            // Total_Expand_new_sum = 0;
+            // Total_Expand_old_sum = 0;
+            Expand_total_new_line = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                value = data[i];
+                Expand_total_new_line.Add(value.Total_expend_New);
+            }
+            for (int i = 0; i < Expand_total_new_line.Count; i++)
+            {
+                Total_Expand_new_sum = (int)Expand_total_new_line[i];
+            }
+            Expand_total_old_line = new List<double>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                value = data[i];
+                Expand_total_old_line.Add(value.Total_expend_old);
+            }
+            for (int i = 0; i < Expand_total_old_line.Count; i++)
+            {
+                Total_Expand_old_sum = (int)Expand_total_old_line[i];
+            }
+
+
+
 
 
             label74.Text = Convert.ToString(Fee_Old_sum);
@@ -627,6 +655,13 @@ namespace WindowsFormsApp1
             double tl = ((Total_Labor_new_sum - Total_Labor_old_sum) / (double)Total_Labor_old_sum) * 100;
             tl = Math.Round(tl, 2);
             label52.Text = Convert.ToString(tl);
+
+            label82.Text = Convert.ToString(Total_Expand_old_sum);
+            label81.Text = Convert.ToString(Total_Expand_new_sum);
+            label80.Text = Convert.ToString(Total_Expand_new_sum - Total_Expand_old_sum);
+            double te = ((Total_Expand_new_sum - Total_Expand_old_sum) / (double)Total_Expand_old_sum) * 100;
+            te = Math.Round(te, 2);
+            label76.Text = Convert.ToString(te);
 
 
 
@@ -946,6 +981,8 @@ namespace WindowsFormsApp1
         }
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            if (option == 0)
+            {
             cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
@@ -963,6 +1000,27 @@ namespace WindowsFormsApp1
                     Values = new ChartValues<double>(Total_expend_old),
                 },
             };
+            }
+            if (option == 1)
+            {
+                cartesianChart1.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Plėtros, nuomos, lizingo sanaudos",
+                    Values = new ChartValues<double>(Expand_total_new_line),
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Circle,
+                },
+                new LineSeries
+                {
+                    Title = "Pateiktos vertes",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Square,
+                    Values = new ChartValues<double>(Expand_total_old_line),
+                },
+            };
+            }
         }
 
         private void Form1_Closing(object sender, FormClosingEventArgs e)
@@ -990,6 +1048,11 @@ namespace WindowsFormsApp1
             Total_sale_new = new List<double> { 0 };
             Total_fee_New = new List<double> { 0 };
             Total_fee_old_sum = new List<double> { 0 };
+            Expand_total_old_line= new List<double> { 0 };
+            Expand_total_new_line = new List<double> { 0 };
+
+            Expand_total_new_line.Clear();
+            Expand_total_old_line.Clear();
             Total_fee_New.Clear();
             Total_fee_old_sum.Clear();
             SaleOut_total_old.Clear();
@@ -1029,7 +1092,13 @@ namespace WindowsFormsApp1
             Total_sale_old_sum = 0;
             Total_Labor_new_sum = 0;
             Total_Labor_old_sum = 0;
+            Total_Expand_new_sum = 0;
+            Total_Expand_old_sum = 0;
 
+
+
+            Expand_total_new_line.Clear();
+            Expand_total_old_line.Clear();
             Total_fee_New.Clear();
             Total_fee_old_sum.Clear();
             SaleOut_total_old.Clear();
@@ -1074,6 +1143,10 @@ namespace WindowsFormsApp1
             label57.Text = Convert.ToString(Total_Labor_new_sum);
             label56.Text = Convert.ToString(Total_Labor_new_sum - Total_Labor_old_sum);
             label52.Text = Convert.ToString(0);
+            label82.Text = Convert.ToString(Total_Expand_old_sum);
+            label81.Text = Convert.ToString(Total_Expand_new_sum);
+            label80.Text = Convert.ToString(Total_Expand_new_sum - Total_Expand_old_sum);
+            label76.Text = Convert.ToString(0);
 
         }
         private void groupBox1_Enter(object sender, EventArgs e)
