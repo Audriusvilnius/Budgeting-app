@@ -1240,9 +1240,9 @@
             this.label83.Margin = new System.Windows.Forms.Padding(10);
             this.label83.Name = "label83";
             this.label83.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label83.Size = new System.Drawing.Size(109, 25);
+            this.label83.Size = new System.Drawing.Size(160, 25);
             this.label83.TabIndex = 88;
-            this.label83.Text = "Sanaudos";
+            this.label83.Text = "Kitos sanaudos";
             // 
             // label68
             // 
