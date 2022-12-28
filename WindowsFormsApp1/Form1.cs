@@ -353,7 +353,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-
             cartesianChart1.AxisX.Add(new Axis
             {
                 Title = "Month",
@@ -370,7 +369,6 @@ namespace WindowsFormsApp1
 
             btnLoad.Enabled = false;
             btnReset.Enabled = false;
-
         }
         private void btn_Read_Click(object sender, EventArgs e)
         {

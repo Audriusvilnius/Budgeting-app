@@ -206,7 +206,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(191, 67);
             this.btnLoad.TabIndex = 19;
-            this.btnLoad.Text = "Load";
+            this.btnLoad.Text = "Skaičiuot";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click_1);
             // 
@@ -653,7 +653,7 @@
             this.btn_Read.Name = "btn_Read";
             this.btn_Read.Size = new System.Drawing.Size(191, 67);
             this.btn_Read.TabIndex = 29;
-            this.btn_Read.Text = "Read";
+            this.btn_Read.Text = "Duomenys";
             this.btn_Read.UseVisualStyleBackColor = true;
             this.btn_Read.Click += new System.EventHandler(this.btn_Read_Click);
             // 
@@ -2165,7 +2165,7 @@
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(191, 67);
             this.btnReset.TabIndex = 38;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Trinti";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
