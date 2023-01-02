@@ -165,6 +165,7 @@
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.label84 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -206,7 +207,7 @@
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(191, 67);
             this.btnLoad.TabIndex = 19;
-            this.btnLoad.Text = "Skaičiuot";
+            this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click_1);
             // 
@@ -319,6 +320,7 @@
             this.textBox1.Size = new System.Drawing.Size(120, 31);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "1300";
+            this.textBox1.Click += new System.EventHandler(this.btnLoad_Click_1);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // numericUpDown3
@@ -565,6 +567,7 @@
             this.textBox4.TabIndex = 19;
             this.textBox4.Text = "6.00";
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.Leave += new System.EventHandler(this.btnLoad_Click_1);
             // 
             // label11
             // 
@@ -653,7 +656,7 @@
             this.btn_Read.Name = "btn_Read";
             this.btn_Read.Size = new System.Drawing.Size(191, 67);
             this.btn_Read.TabIndex = 29;
-            this.btn_Read.Text = "Duomenys";
+            this.btn_Read.Text = "Read";
             this.btn_Read.UseVisualStyleBackColor = true;
             this.btn_Read.Click += new System.EventHandler(this.btn_Read_Click);
             // 
@@ -2165,7 +2168,7 @@
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(191, 67);
             this.btnReset.TabIndex = 38;
-            this.btnReset.Text = "Trinti";
+            this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -2181,6 +2184,7 @@
             this.radioButton7.Text = "Verte";
             this.radioButton7.UseVisualStyleBackColor = true;
             this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
+            this.radioButton7.Click += new System.EventHandler(this.btnLoad_Click_1);
             // 
             // radioButton14
             // 
@@ -2196,6 +2200,7 @@
             this.radioButton14.Text = "Suma";
             this.radioButton14.UseVisualStyleBackColor = true;
             this.radioButton14.CheckedChanged += new System.EventHandler(this.radioButton14_CheckedChanged);
+            this.radioButton14.Click += new System.EventHandler(this.btnLoad_Click_1);
             // 
             // label84
             // 
@@ -2211,6 +2216,20 @@
             this.label84.TabIndex = 94;
             this.label84.Text = "Grafiko atvaizdavimas";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.AutoSize = true;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.button1.Location = new System.Drawing.Point(470, 1217);
+            this.button1.Margin = new System.Windows.Forms.Padding(15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 67);
+            this.button1.TabIndex = 95;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -2218,6 +2237,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1874, 1322);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label84);
             this.Controls.Add(this.radioButton14);
             this.Controls.Add(this.btnReset);
@@ -2394,6 +2414,7 @@
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Button button1;
     }
 }
 

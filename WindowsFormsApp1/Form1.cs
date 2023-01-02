@@ -369,6 +369,10 @@ namespace WindowsFormsApp1
 
             btnLoad.Enabled = false;
             btnReset.Enabled = false;
+            radioButton7.Enabled = false;
+            radioButton14.Enabled = false;
+            groupBox3.Enabled = false;
+            label84.Enabled = false;
         }
         private void btn_Read_Click(object sender, EventArgs e)
         {
@@ -408,8 +412,12 @@ namespace WindowsFormsApp1
         {
             groupBox2.Enabled = true;
             groupBox1.Enabled = true;
-            btn_Read.Enabled = false;
+            groupBox3.Enabled = true;
             btnReset.Enabled = true;
+            radioButton7.Enabled = true;
+            radioButton14.Enabled = true;
+            label84.Enabled = true;
+
 
             Budget value = new Budget<Budget>(data);
 
@@ -693,7 +701,9 @@ namespace WindowsFormsApp1
             tv = Math.Round(tv, 2);
             label92.Text = Convert.ToString(tv);
 
-            cartesianChart1.Series = new SeriesCollection
+            if (option == 1)
+            {
+                cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
                 {
@@ -709,7 +719,7 @@ namespace WindowsFormsApp1
                     Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0)),
                     Values = new ChartValues<double>(tem1)
                 },
-                 new LineSeries
+                new LineSeries
                 {
                     Title = "Pateiktos vertes",
                     PointGeometrySize = point_size,
@@ -717,6 +727,40 @@ namespace WindowsFormsApp1
                     Values = new ChartValues<double>(Total_Old),
                 },
             };
+
+
+            }
+            if (option == 0)
+            {
+
+                cartesianChart1.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Prognozuojamas pelnas",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Circle,
+                    Values = new ChartValues<double>(Total_value),
+                },
+                new LineSeries
+                {
+                    Title = "",
+                    PointGeometrySize = 0,
+                    PointGeometry = null,
+                    Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0)),
+                    Values = new ChartValues<double>(tem1),
+                },
+                new LineSeries
+                {
+                    Title = "Pateiktos vertes",
+                    PointGeometrySize = point_size,
+                    PointGeometry = DefaultGeometries.Square,
+                    Values = new ChartValues<double>(Total_value_old),
+                },
+            };
+            }
+
+
         }
         private void cartesianChart1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
         {
@@ -787,7 +831,6 @@ namespace WindowsFormsApp1
         {
             if (option == 0)
             {
-
                 cartesianChart1.Series = new SeriesCollection
             {
                 new LineSeries
@@ -833,7 +876,7 @@ namespace WindowsFormsApp1
                     Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0)),
                     Values = new ChartValues<double>(tem1)
                 },
-                 new LineSeries
+                new LineSeries
                 {
                     Title = "Pateiktos vertes",
                     PointGeometrySize = point_size,
@@ -1063,7 +1106,7 @@ namespace WindowsFormsApp1
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Expand_total_old_line),
-                },
+                }
             };
             }
         }
@@ -1127,9 +1170,18 @@ namespace WindowsFormsApp1
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
-            btn_Read.Enabled = true;
+            option = 1;
             btnLoad.Enabled = false;
-            btnReset.Enabled = false;
+            radioButton14.Checked = false;
+            radioButton7.Checked = false;
+            radioButton7.Enabled = false;
+            radioButton14.Enabled = false;
+            groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
+            groupBox3.Enabled = false;
+            btn_Read.Enabled = true;
+            label84.Enabled = false;
+
             Fee_Old_sum = 0;
             Fee_New_sum = 0;
             Total_New_sum = 0;
@@ -1143,6 +1195,7 @@ namespace WindowsFormsApp1
             Total_Oper_Cost_new_sum = 0;
             Total_Oper_Cost_old_sum = 0;
 
+            cartesianChart1.Series.Clear();
             Oper_Cost_total_new_line.Clear();
             Oper_Cost_total_old_line.Clear();
             Expand_total_new_line.Clear();
@@ -1205,6 +1258,7 @@ namespace WindowsFormsApp1
             label97.Text = Convert.ToString(Total_sale_new_sum + Total_Labor_new_sum);
             label96.Text = Convert.ToString(Total_sale_new_sum + Total_Labor_new_sum - Total_sale_old_sum + Total_Labor_old_sum);
             label92.Text = Convert.ToString(0);
+            btnReset.Enabled = false;
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -1212,10 +1266,19 @@ namespace WindowsFormsApp1
         private void radioButton7_CheckedChanged(object sender, EventArgs e)
         {
             option = 0;
+            radioButton1.Checked = true;
         }
         private void radioButton14_CheckedChanged(object sender, EventArgs e)
         {
             option = 1;
+            radioButton1.Checked = true;
+        }
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
