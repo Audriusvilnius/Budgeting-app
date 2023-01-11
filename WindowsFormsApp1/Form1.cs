@@ -393,18 +393,20 @@ namespace WindowsFormsApp1
                     {
                         string line = reader.ReadLine();
                         string[] items = line.Split(',');
-                        Budget can = new Budget();
-                        can.SaleOut = Convert.ToDouble(items[0]);        //  Medziagu pardavimo kaina
-                        can.LabourSaleOut = Convert.ToDouble(items[1]);  //  Paslaugu pardavimo kaina
-                        can.SaleIn = Convert.ToDouble(items[2]);         //  Prekiu savikaina
-                        can.Fee = Convert.ToDouble(items[3]);            //  Atliginimai
-                        can.Expend = Convert.ToDouble(items[4]);         //  Patalpu nuoma, nusidevejimas, paskolos
-                        can.OperCost = Convert.ToDouble(items[5]);
+                        Budget can = new Budget
+                        {
+                            SaleOut = Convert.ToDouble(items[0]),        //  Medziagu pardavimo kaina
+                            LabourSaleOut = Convert.ToDouble(items[1]),  //  Paslaugu pardavimo kaina
+                            SaleIn = Convert.ToDouble(items[2]),         //  Prekiu savikaina
+                            Fee = Convert.ToDouble(items[3]),            //  Atliginimai
+                            Expend = Convert.ToDouble(items[4]),         //  Patalpu nuoma, nusidevejimas, paskolos
+                            OperCost = Convert.ToDouble(items[5])
+                        };
                         data.Add(can);
                     }
                 }
             }
-            else MessageBox.Show("File no selected");
+            else _ = MessageBox.Show("File no selected\nClick Load and Reset Button!", "Alert");
             btn_Read.Enabled = false;
             btnLoad.Enabled = true;
         }
