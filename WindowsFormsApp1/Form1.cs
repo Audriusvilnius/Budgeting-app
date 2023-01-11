@@ -106,27 +106,6 @@ namespace WindowsFormsApp1
             static double total_labor_New;
             static double total_labor_Old;
 
-            public object numericUpDown1;
-            public object numericUpDown2;
-            public object numericUpDown3;
-            public object numericUpDown4;
-            public object numericUpDown5;
-            public object numericUpDown6;
-            public object numericUpDown7;
-            public object numericUpDown8;
-            public object label28;
-            public object textBox1;
-            public object textBox2;
-            public object textBox3;
-            public object textBox4;
-            public object textBox5;
-            public object textBox6;
-            public object radioButton1_CheckedChanged_1;
-            public object radioButton7;
-            public object radioButton22;
-            public object radioButton14;
-            public object btn_Read_Click;
-
             public double Get_saleOut
             {
                 get => saleOut;
