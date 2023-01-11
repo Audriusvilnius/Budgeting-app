@@ -1,2 +1,2 @@
 # DataCharPR
-# Biudzeto plaavimo skaiciuokle
+# Biudzeto planvimo skaiciuokle
