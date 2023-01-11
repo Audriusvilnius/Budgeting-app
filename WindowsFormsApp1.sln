@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TextFile2.txt = TextFile2.txt
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{B63258F0-3967-48EF-894B-6E4A8BFC4341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{C839201C-F9FB-48AA-9368-97B875D5C8C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C839201C-F9FB-48AA-9368-97B875D5C8C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C839201C-F9FB-48AA-9368-97B875D5C8C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63258F0-3967-48EF-894B-6E4A8BFC4341}.Debug|Any CPU.ActiveCfg = Debug
+		{B63258F0-3967-48EF-894B-6E4A8BFC4341}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
