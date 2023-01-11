@@ -2259,7 +2259,7 @@
             this.Controls.Add(this.cartesianChart1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(958, 558);
+            this.MinimumSize = new System.Drawing.Size(996, 747);
             this.Name = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_Closing);
             this.Load += new System.EventHandler(this.Form1_Load);
