@@ -219,10 +219,10 @@
             this.radioButton1.Location = new System.Drawing.Point(29, 42);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 17);
+            this.radioButton1.Size = new System.Drawing.Size(49, 17);
             this.radioButton1.TabIndex = 27;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Pelnas";
+            this.radioButton1.Text = "Profit";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
@@ -258,9 +258,9 @@
             this.label1.Margin = new System.Windows.Forms.Padding(5);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Klientų portfelio augimas";
+            this.label1.Text = "Client portfolio growth";
             // 
             // numericUpDown2
             // 
@@ -294,9 +294,9 @@
             this.label2.Margin = new System.Windows.Forms.Padding(5);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(130, 13);
+            this.label2.Size = new System.Drawing.Size(129, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Klientų portfelio mažėjimas";
+            this.label2.Text = "Decreasing clinet portfolio";
             // 
             // label3
             // 
@@ -307,9 +307,9 @@
             this.label3.Margin = new System.Windows.Forms.Padding(5);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Aktyvių klientų";
+            this.label3.Text = "Active clients";
             // 
             // textBox1
             // 
@@ -357,9 +357,9 @@
             this.label4.Margin = new System.Windows.Forms.Padding(5);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label4.Size = new System.Drawing.Size(111, 13);
+            this.label4.Size = new System.Drawing.Size(89, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Paslaugos val. įkainis ";
+            this.label4.Text = "Labour  unit price";
             // 
             // numericUpDown4
             // 
@@ -393,9 +393,9 @@
             this.label5.Margin = new System.Windows.Forms.Padding(5);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.Size = new System.Drawing.Size(98, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Etatu kiekis ";
+            this.label5.Text = "Full time employees";
             // 
             // label6
             // 
@@ -406,9 +406,9 @@
             this.label6.Margin = new System.Windows.Forms.Padding(5);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label6.Size = new System.Drawing.Size(123, 13);
+            this.label6.Size = new System.Drawing.Size(155, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Numatomas etatu kiekis ";
+            this.label6.Text = "Projected of full time employees";
             // 
             // numericUpDown5
             // 
@@ -444,7 +444,7 @@
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(82, 13);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Prekių antkainis";
+            this.label7.Text = "Product markup";
             // 
             // numericUpDown6
             // 
@@ -478,9 +478,9 @@
             this.label8.Margin = new System.Windows.Forms.Padding(5);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(126, 13);
+            this.label8.Size = new System.Drawing.Size(100, 13);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Numatomas efektyvumas";
+            this.label8.Text = "Expected efficiency";
             // 
             // numericUpDown7
             // 
@@ -514,9 +514,9 @@
             this.label9.Margin = new System.Windows.Forms.Padding(5);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label9.Size = new System.Drawing.Size(104, 13);
+            this.label9.Size = new System.Drawing.Size(127, 13);
             this.label9.TabIndex = 18;
-            this.label9.Text = "Vidutinio DU kitimas ";
+            this.label9.Text = "Change in average salary";
             // 
             // label10
             // 
@@ -527,9 +527,9 @@
             this.label10.Margin = new System.Windows.Forms.Padding(5);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label10.Size = new System.Drawing.Size(118, 13);
+            this.label10.Size = new System.Drawing.Size(128, 13);
             this.label10.TabIndex = 22;
-            this.label10.Text = "Veiklos sanaudu pokitis";
+            this.label10.Text = "Change in operating profit";
             // 
             // textBox2
             // 
@@ -580,9 +580,9 @@
             this.label11.Margin = new System.Windows.Forms.Padding(5);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(115, 13);
+            this.label11.Size = new System.Drawing.Size(119, 13);
             this.label11.TabIndex = 20;
-            this.label11.Text = "Plėtra, nuoma, lizingas ";
+            this.label11.Text = "Expansion, rent, leasing";
             // 
             // textBox5
             // 
@@ -606,9 +606,9 @@
             this.label12.Margin = new System.Windows.Forms.Padding(5);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(99, 13);
+            this.label12.Size = new System.Drawing.Size(97, 13);
             this.label12.TabIndex = 24;
-            this.label12.Text = "Infliacija / Defliacija";
+            this.label12.Text = "Inflation / Deflation";
             // 
             // textBox6
             // 
@@ -632,9 +632,9 @@
             this.label13.Margin = new System.Windows.Forms.Padding(5);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(108, 13);
+            this.label13.Size = new System.Drawing.Size(123, 13);
             this.label13.TabIndex = 26;
-            this.label13.Text = "Tiekimo kainų kitimas";
+            this.label13.Text = "Variation in supply prices";
             // 
             // radioButton2
             // 
@@ -642,10 +642,10 @@
             this.radioButton2.Location = new System.Drawing.Point(29, 65);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(108, 17);
+            this.radioButton2.Size = new System.Drawing.Size(99, 17);
             this.radioButton2.TabIndex = 28;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Veiklos sanaudos";
+            this.radioButton2.Text = "Operating costs";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -697,7 +697,7 @@
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label14.Size = new System.Drawing.Size(64, 13);
             this.label14.TabIndex = 31;
-            this.label14.Text = "Taško dydis";
+            this.label14.Text = "Dot size";
             // 
             // radioButton3
             // 
@@ -705,10 +705,10 @@
             this.radioButton3.Location = new System.Drawing.Point(29, 88);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(163, 17);
+            this.radioButton3.Size = new System.Drawing.Size(130, 17);
             this.radioButton3.TabIndex = 32;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Paslaugu pardavimo pajamos";
+            this.radioButton3.Text = "Service sales revenue";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -718,10 +718,10 @@
             this.radioButton4.Location = new System.Drawing.Point(29, 163);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(248, 17);
+            this.radioButton4.Size = new System.Drawing.Size(230, 17);
             this.radioButton4.TabIndex = 35;
             this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Patalpu nuoma, nusidevejimas, paskolos, plėtra";
+            this.radioButton4.Text = "Premises rent, disposal, loans, development";
             this.radioButton4.UseVisualStyleBackColor = true;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
@@ -731,10 +731,10 @@
             this.radioButton5.Location = new System.Drawing.Point(29, 137);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(150, 17);
+            this.radioButton5.Size = new System.Drawing.Size(102, 17);
             this.radioButton5.TabIndex = 34;
             this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Darbo užmokesčio išlaidos";
+            this.radioButton5.Text = "Salary expenses";
             this.radioButton5.UseVisualStyleBackColor = true;
             this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
             // 
@@ -744,10 +744,10 @@
             this.radioButton6.Location = new System.Drawing.Point(29, 111);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(155, 17);
+            this.radioButton6.Size = new System.Drawing.Size(188, 17);
             this.radioButton6.TabIndex = 33;
             this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Atsargų pardavimo pajamos";
+            this.radioButton6.Text = "Proceeds from the sale of reserves";
             this.radioButton6.UseVisualStyleBackColor = true;
             this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
             // 
@@ -906,11 +906,11 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.numericUpDown7);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Location = new System.Drawing.Point(679, 11);
+            this.groupBox2.Location = new System.Drawing.Point(677, 11);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(290, 387);
+            this.groupBox2.Size = new System.Drawing.Size(292, 387);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             // 
@@ -1295,9 +1295,9 @@
             this.label99.Margin = new System.Windows.Forms.Padding(5);
             this.label99.Name = "label99";
             this.label99.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label99.Size = new System.Drawing.Size(49, 13);
+            this.label99.Size = new System.Drawing.Size(50, 13);
             this.label99.TabIndex = 102;
-            this.label99.Text = "Apyvarta";
+            this.label99.Text = "Turnover";
             // 
             // label85
             // 
@@ -1491,9 +1491,9 @@
             this.label83.Margin = new System.Windows.Forms.Padding(5);
             this.label83.Name = "label83";
             this.label83.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label83.Size = new System.Drawing.Size(79, 13);
+            this.label83.Size = new System.Drawing.Size(81, 13);
             this.label83.TabIndex = 88;
-            this.label83.Text = "Kitos sanaudos";
+            this.label83.Text = "Other expenses";
             // 
             // label68
             // 
@@ -1603,9 +1603,9 @@
             this.label75.Margin = new System.Windows.Forms.Padding(5);
             this.label75.Name = "label75";
             this.label75.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label75.Size = new System.Drawing.Size(91, 13);
+            this.label75.Size = new System.Drawing.Size(84, 13);
             this.label75.TabIndex = 80;
-            this.label75.Text = "Darbo užmokestis";
+            this.label75.Text = "Salary expenses";
             // 
             // label60
             // 
@@ -1715,9 +1715,9 @@
             this.label67.Margin = new System.Windows.Forms.Padding(5);
             this.label67.Name = "label67";
             this.label67.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label67.Size = new System.Drawing.Size(100, 13);
+            this.label67.Size = new System.Drawing.Size(46, 13);
             this.label67.TabIndex = 72;
-            this.label67.Text = "Atsargu pardavimas";
+            this.label67.Text = "Sale out";
             // 
             // label52
             // 
@@ -1827,9 +1827,9 @@
             this.label59.Margin = new System.Windows.Forms.Padding(5);
             this.label59.Name = "label59";
             this.label59.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label59.Size = new System.Drawing.Size(108, 13);
+            this.label59.Size = new System.Drawing.Size(67, 13);
             this.label59.TabIndex = 64;
-            this.label59.Text = "Paslaugų pardavimas";
+            this.label59.Text = "Labour sales";
             // 
             // label44
             // 
@@ -1939,9 +1939,9 @@
             this.label51.Margin = new System.Windows.Forms.Padding(5);
             this.label51.Name = "label51";
             this.label51.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label51.Size = new System.Drawing.Size(90, 13);
+            this.label51.Size = new System.Drawing.Size(81, 13);
             this.label51.TabIndex = 56;
-            this.label51.Text = "Veiklos sanaudos";
+            this.label51.Text = "Operating costs";
             // 
             // label36
             // 
@@ -2051,9 +2051,9 @@
             this.label43.Margin = new System.Windows.Forms.Padding(5);
             this.label43.Name = "label43";
             this.label43.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label43.Size = new System.Drawing.Size(39, 13);
+            this.label43.Size = new System.Drawing.Size(31, 13);
             this.label43.TabIndex = 48;
-            this.label43.Text = "Pelnas";
+            this.label43.Text = "Profit";
             // 
             // label35
             // 
@@ -2184,12 +2184,12 @@
             // 
             this.radioButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(894, 411);
+            this.radioButton7.Location = new System.Drawing.Point(892, 411);
             this.radioButton7.Margin = new System.Windows.Forms.Padding(5);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(50, 17);
+            this.radioButton7.Size = new System.Drawing.Size(52, 17);
             this.radioButton7.TabIndex = 38;
-            this.radioButton7.Text = "Verte";
+            this.radioButton7.Text = "Value";
             this.radioButton7.UseVisualStyleBackColor = true;
             this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
             this.radioButton7.Click += new System.EventHandler(this.btnLoad_Click_1);
@@ -2220,9 +2220,9 @@
             this.label84.Margin = new System.Windows.Forms.Padding(5);
             this.label84.Name = "label84";
             this.label84.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label84.Size = new System.Drawing.Size(111, 13);
+            this.label84.Size = new System.Drawing.Size(79, 13);
             this.label84.TabIndex = 94;
-            this.label84.Text = "Grafiko atvaizdavimas";
+            this.label84.Text = "Representation";
             // 
             // button1
             // 

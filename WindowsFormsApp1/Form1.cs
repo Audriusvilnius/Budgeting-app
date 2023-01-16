@@ -688,21 +688,21 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Prognozuojamos vertes",
+                    Title = "Estimated amounts ",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                     Values = new ChartValues<double>(Total_New),
                 },
                 new LineSeries
                 {
-                    Title = "Nuostolių slenkstis",
+                    Title = "",
                     PointGeometry = null,
                     Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(0, 0, 0)),
                     Values = new ChartValues<double>(tem1)
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Total_Old),
@@ -718,7 +718,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Prognozuojamas pelnas",
+                    Title = "Estimated amounts",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                     Values = new ChartValues<double>(Total_value),
@@ -733,7 +733,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Total_value_old),
@@ -816,7 +816,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Prognozuojamas pelnas",
+                    Title = "Estimated amounts",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                     Values = new ChartValues<double>(Total_value),
@@ -831,7 +831,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Total_value_old),
@@ -845,7 +845,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Prognozuojamos vertes",
+                    Title = "Estimated amounts ",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                     Values = new ChartValues<double>(Total_New),
@@ -859,7 +859,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Total_Old),
@@ -875,14 +875,14 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Veiklos sanaudos",
+                    Title = "Operating costs",
                     Values = new ChartValues<double>(Oper_Cost_total),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertės",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Oper_Cost_total_old),
@@ -902,7 +902,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertės",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Oper_Cost_total_old_line),
@@ -926,7 +926,7 @@ namespace WindowsFormsApp1
 
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Labor_total_old),
@@ -947,7 +947,7 @@ namespace WindowsFormsApp1
 
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Labor_total_old_line),
@@ -972,7 +972,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(SaleOut_total_old),
@@ -994,7 +994,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Total_sale_old),
@@ -1018,7 +1018,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Total_fee_old),
@@ -1040,7 +1040,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Total_fee_old_sum),
@@ -1063,7 +1063,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Total_expend_old),
@@ -1083,7 +1083,7 @@ namespace WindowsFormsApp1
                 },
                 new LineSeries
                 {
-                    Title = "Pateiktos vertes",
+                    Title = "Amounts submitted",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Square,
                     Values = new ChartValues<double>(Expand_total_old_line),
