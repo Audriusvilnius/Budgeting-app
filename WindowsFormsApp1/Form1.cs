@@ -688,7 +688,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Estimated amounts ",
+                    Title = "Profit amounts ",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                     Values = new ChartValues<double>(Total_New),
@@ -718,7 +718,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Estimated amounts",
+                    Title = "Profit amounts",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                     Values = new ChartValues<double>(Total_value),
@@ -816,7 +816,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Estimated amounts",
+                    Title = "Profit amounts",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                     Values = new ChartValues<double>(Total_value),
@@ -845,7 +845,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Estimated amounts ",
+                    Title = "Profit amounts",
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
                     Values = new ChartValues<double>(Total_New),
@@ -895,7 +895,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Veiklos sanaudos",
+                    Title = "Operating costs",
                     Values = new ChartValues<double>(Oper_Cost_total_new_line),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
@@ -918,7 +918,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Paslaugų pajamos",
+                    Title = "Labour sale out",
                     Values = new ChartValues<double>(Labor_total),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
@@ -939,7 +939,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Paslaugų pajamos",
+                    Title = "Labour sale out",
                     Values = new ChartValues<double>(Labor_total_new_line),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
@@ -965,7 +965,7 @@ namespace WindowsFormsApp1
 
                 new LineSeries
                 {
-                    Title = "Atsargų pirkimo išlaidos",
+                    Title = "Sale in parts",
                     Values = new ChartValues<double>(SaleOut_total),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
@@ -987,7 +987,7 @@ namespace WindowsFormsApp1
 
                 new LineSeries
                 {
-                    Title = "Atsargų pirkimo išlaidos",
+                    Title = "Sale in parts",
                     Values = new ChartValues<double>(Total_sale_new),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
@@ -1011,7 +1011,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Darbo užmokesčio sanaudos",
+                    Title = "Salary expenses",
                     Values = new ChartValues<double>(Total_fee),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
@@ -1033,7 +1033,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Darbo užmokesčio sanaudos",
+                    Title = "Salary expenses",
                     Values = new ChartValues<double>(Total_fee_New),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
@@ -1056,7 +1056,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Plėtros, nuomos, lizingo sanaudos",
+                    Title = "Expansion, rent, leasing",
                     Values = new ChartValues<double>(Total_expend),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,
@@ -1076,7 +1076,7 @@ namespace WindowsFormsApp1
             {
                 new LineSeries
                 {
-                    Title = "Plėtros, nuomos, lizingo sanaudos",
+                    Title = "Expansion, rent, leasing",
                     Values = new ChartValues<double>(Expand_total_new_line),
                     PointGeometrySize = point_size,
                     PointGeometry = DefaultGeometries.Circle,

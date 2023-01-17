@@ -697,7 +697,7 @@
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label14.Size = new System.Drawing.Size(64, 13);
             this.label14.TabIndex = 31;
-            this.label14.Text = "Dot size";
+            this.label14.Text = "Point size";
             // 
             // radioButton3
             // 
@@ -2065,9 +2065,9 @@
             this.label35.Margin = new System.Windows.Forms.Padding(5);
             this.label35.Name = "label35";
             this.label35.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label35.Size = new System.Drawing.Size(45, 13);
+            this.label35.Size = new System.Drawing.Size(57, 13);
             this.label35.TabIndex = 45;
-            this.label35.Text = "Pokitis";
+            this.label35.Text = "Variation";
             // 
             // label34
             // 
@@ -2120,9 +2120,9 @@
             this.label31.Margin = new System.Windows.Forms.Padding(5);
             this.label31.Name = "label31";
             this.label31.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label31.Size = new System.Drawing.Size(72, 13);
+            this.label31.Size = new System.Drawing.Size(84, 13);
             this.label31.TabIndex = 43;
-            this.label31.Text = "Pokitis Eur.";
+            this.label31.Text = "Variation Eur.";
             // 
             // label30
             // 
@@ -2130,13 +2130,13 @@
             this.label30.AutoSize = true;
             this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label30.Location = new System.Drawing.Point(364, 28);
+            this.label30.Location = new System.Drawing.Point(381, 28);
             this.label30.Margin = new System.Windows.Forms.Padding(5);
             this.label30.Name = "label30";
             this.label30.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label30.Size = new System.Drawing.Size(165, 13);
+            this.label30.Size = new System.Drawing.Size(140, 13);
             this.label30.TabIndex = 42;
-            this.label30.Text = "Prognozuojamos sumos Eur.";
+            this.label30.Text = "Estimated amounts Eur.";
             // 
             // label29
             // 
@@ -2144,13 +2144,13 @@
             this.label29.AutoSize = true;
             this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label29.Location = new System.Drawing.Point(160, 29);
+            this.label29.Location = new System.Drawing.Point(115, 29);
             this.label29.Margin = new System.Windows.Forms.Padding(5);
             this.label29.Name = "label29";
             this.label29.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label29.Size = new System.Drawing.Size(99, 13);
+            this.label29.Size = new System.Drawing.Size(113, 13);
             this.label29.TabIndex = 41;
-            this.label29.Text = "Pateiktos sumos";
+            this.label29.Text = "Amounts submitted";
             // 
             // label28
             // 
@@ -2162,9 +2162,9 @@
             this.label28.Margin = new System.Windows.Forms.Padding(5);
             this.label28.Name = "label28";
             this.label28.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label28.Size = new System.Drawing.Size(64, 13);
+            this.label28.Size = new System.Drawing.Size(57, 13);
             this.label28.TabIndex = 40;
-            this.label28.Text = "Kategorija";
+            this.label28.Text = "Category";
             // 
             // btnReset
             // 
