@@ -1,2 +1,1 @@
-# DataCharPR
 # Biudzeto planvimo skaiciuokle
